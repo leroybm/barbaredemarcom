@@ -14,8 +14,16 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  whatIsTherapy
 }) => (
   <div>
+    <section className="c-what-is-therapy">
+      <div className="c-container">
+        <h2>{whatIsTherapy.title}</h2>
+
+        <p>{whatIsTherapy.body}</p>
+      </div>
+    </section>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -124,6 +132,10 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  whatIsTherapy: PropTypes.shape({
+    title: PropTypes.string,
+    body: PropTypes.string
+  })
 }
 
 const IndexPage = ({ data }) => {
@@ -139,6 +151,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        whatIsTherapy={frontmatter.whatIsTherapy}
       />
     </Layout>
   )
@@ -186,6 +199,10 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        whatIsTherapy {
+          title
+          body
         }
       }
     }

@@ -1,5 +1,15 @@
 ---
 templateKey: index-page
+whatIsTherapy:
+  title: O que é
+  body: >
+    Estar em terapia é encontrar novas de dialogar com aquelas partes da nossa 
+    história que preocupam, tiram o sono, invadem a vida ou que ainda não temos 
+    entendimento. É ter acesso a uma  linguagem própria, criar significados, 
+    possibilidades e através das conversas e da expressão conseguir relatar a nós 
+    mesmos, por nós mesmos, gerando conexões com as nossas histórias de vida,  
+    compreendendo melhor nossas versões, quem nos tornamos no passado, como vivemos 
+    o presente e buscando ampliar nossa visão de nós mesmos no futuro.
 title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience

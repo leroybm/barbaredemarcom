@@ -1,12 +1,27 @@
+// Vars
+$barbara-blue: linear-gradient(180deg, #2888AD 0%, #0378A6 100%)
+
+$font-roboto: "Roboto", sans-serif
+$font-amatic: 'Amatic SC', cursive
+$font-quicksand: 'Quicksand', sans-serif
+
+// CSS Snippets
+%flex-center-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+// General layout classes
+.c-container
+  max-width: 1110px
+  margin: 0 auto
+
 // Landing page header
 .c-header-landing-page
   background: url('../img/c-header-landing-page.jpg') no-repeat fixed center
   background-size: cover
   padding-top: 90px
   height: 100vh
-
-  .c-container
-    max-width: 1110px
 
   .c-navbar
     background: transparent
@@ -40,3 +55,22 @@
 
   svg
     display: block
+// Landing Page - "O que é..."
+.c-what-is-therapy
+  background: $barbara-blue
+  color: #fff
+  padding: 85px 0
+
+  .c-container
+    @extend %flex-center-center
+    flex-direction: column
+
+  h2
+    font-family: $font-amatic
+    font-size: 90px
+    margin-bottom: 40px
+
+  p
+    font-family: $font-quicksand
+    font-size: 19px
+    text-align: center
