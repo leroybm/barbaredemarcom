@@ -64,6 +64,28 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
+
+    <section className="c-for-who">
+      <h2>Para quem</h2>
+
+      <div className="c-for-who__types">
+        <div className="c-for-who__type">
+          <h3>Terapia Individual</h3>
+
+          <p>São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!</p>
+
+          <button>Como funciona</button>
+        </div>
+
+        <div className="c-for-who__type">
+          <h3>Terapia de Casal</h3>
+
+          <p>Estar em terapia de casal é encontrar um lugar seguro e aberto para os diálogos que movimentam a relação, é estar em um espaço que facilita as conversas mais difíceis, que muitas vezes não se consegue abordar sozinhos na relação, e observar de diferentes ângulos a dinâmica de cada casal.</p>
+
+          <button>Como funciona</button>
+        </div>
+      </div>
+    </section>
     <div
       className="full-width-image margin-top-0"
       style={{
