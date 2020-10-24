@@ -1,10 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import cSlides1 from "../img/c-slides-1.jpg";
+import { faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons'
+import { faCircle as faCircleSolid } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/LayoutLandingPage'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const IndexPageTemplate = ({
   image,
@@ -22,6 +26,42 @@ export const IndexPageTemplate = ({
         <h2>{whatIsTherapy.title}</h2>
 
         <p>{whatIsTherapy.body}</p>
+      </div>
+    </section>
+
+    <section className="c-types-of-therapy">
+      <div className="c-container">
+        <div className="c-slides">
+          <div className="c-slide">
+            <div className="c-slide-image">
+              <img src={cSlides1} alt="" />
+            </div>
+            <div className="c-slide-body">
+              <h3>PARA ENCONTRAR A SI MESMO</h3>
+
+              <p>
+                Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.<br/><br/>
+                Encontrar a si mesmo é um processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e com maior confiança alcançar o equilíbrio na vida pessoal e profissional.<br/><br/>
+                A terapia traz a compreensão de quem se é, e como viver no mundo quebrando ciclos e gerando liberdade.<br/><br/>
+                “A vida fica mais leve quando a gente vive pra gente”
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="c-slides-nav">
+          <nav>
+            <button>
+              <FontAwesomeIcon icon={faCircleRegular} />
+            </button>
+            <button>
+              <FontAwesomeIcon icon={faCircleSolid} />
+            </button>
+            <button>
+              <FontAwesomeIcon icon={faCircleRegular} />
+            </button>
+          </nav>
+        </div>
       </div>
     </section>
     <div

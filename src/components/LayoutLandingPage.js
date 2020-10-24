@@ -49,7 +49,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
 
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Quicksand:wght@400;500&display=swap" rel="stylesheet" />
       </Helmet>
       <Navbar />
       <SocialNetworks/>
