@@ -5,6 +5,8 @@ $font-roboto: "Roboto", sans-serif
 $font-amatic: 'Amatic SC', cursive
 $font-quicksand: 'Quicksand', sans-serif
 
+$body-padding: 72px
+
 // CSS Snippets
 %flex-center-center
   display: flex
@@ -23,6 +25,10 @@ $font-quicksand: 'Quicksand', sans-serif
   padding-top: 90px
   height: 100vh
 
+  .c-container
+    max-width: none !important
+    padding: 0 $body-padding 0
+
   .c-navbar
     background: transparent
 
@@ -30,18 +36,22 @@ $font-quicksand: 'Quicksand', sans-serif
     font-size: 24px
     line-height: 28px
     color: rgba(0, 0, 0, 0.7)
-    font-variant-caps: small-caps
-    font-family: "Roboto", sans-serif
+    text-transform: uppercase
+    font-family: $font-quicksand
+    padding: 0 16px
+
+    &:first-of-type
+      padding-left: 0
 
   .c-logo
     display: block
     margin-top: 130px
-    margin-left: 177px
+    margin-left: 488px
 
 // Floating bottom left social network icons
 .c-social-networks
   position: fixed
-  left: 72px
+  left: $body-padding
   bottom: 64px
 
   a
