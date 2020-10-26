@@ -4,8 +4,10 @@ import { Link, graphql } from 'gatsby'
 import cSlides1 from "../img/c-slides-1.jpg";
 import cHands1 from "../img/c-hands-1.jpg";
 import cHands2 from "../img/c-hands-2.jpg";
+import cAboutBarbara from "../img/c-about-barbara.jpg";
 import { faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons'
 import { faCircle as faCircleSolid } from '@fortawesome/free-solid-svg-icons'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 import Layout from '../components/LayoutLandingPage'
 import Features from '../components/Features'
@@ -94,6 +96,37 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
+
+    <section className="c-about-barbara">
+      <div className="c-container">
+        <h2>Quem faz</h2>
+
+        <div className="c-columns">
+          <div className="c-about">
+            <p>Bárbara Demarco, é terapeuta, palestrante, consultora e analista, aventureira no mundo da escrita, onde expressa o seu sentir e criatividade. Através de seu trabalho ela busca ajudar outras pessoas a criar novas possibilidades e resultados, para seus clientes, organizações e para si mesmas.<br/><br/>
+              Sua prática terapêutica é norteada pelo Construcionismo Social e pelas práticas pós modernas da Terapia Narrativa e da Terapia Colaborativa e Dialógica. Ela incorpora sua própria crença na aprendizagem como um processo de vida, incentivando e desafiando as pessoas a serem curiosas, criativas e autênticas e protagonistas do seu processo.</p>
+
+            <button>Mais sobre mim</button>
+          </div>
+          <div className="c-photo">
+            <img src={cAboutBarbara} alt=""/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="c-contato">
+      <div className="c-container">
+        <h2>Contato</h2>
+
+        <div className="c-whatsapp">
+          <p>Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.</p>
+
+          <button><FontAwesomeIcon icon={faWhatsapp} /> Vamos conversar</button>
+        </div>
+      </div>
+    </section>
+
     <div
       className="full-width-image margin-top-0"
       style={{
