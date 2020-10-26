@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import cSlides1 from "../img/c-slides-1.jpg";
+import cHands1 from "../img/c-hands-1.jpg";
+import cHands2 from "../img/c-hands-2.jpg";
 import { faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons'
 import { faCircle as faCircleSolid } from '@fortawesome/free-solid-svg-icons'
 
@@ -66,23 +68,29 @@ export const IndexPageTemplate = ({
     </section>
 
     <section className="c-for-who">
-      <h2>Para quem</h2>
+      <div className="c-container">
+        <h2>Para quem</h2>
 
-      <div className="c-for-who__types">
-        <div className="c-for-who__type">
-          <h3>Terapia Individual</h3>
+        <div className="c-for-who__types">
+          <div className="c-for-who__type">
+            <img src={cHands1} alt=""/>
 
-          <p>São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!</p>
+            <h3>Terapia Individual</h3>
 
-          <button>Como funciona</button>
-        </div>
+            <p>São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!</p>
 
-        <div className="c-for-who__type">
-          <h3>Terapia de Casal</h3>
+            <button>Como funciona</button>
+          </div>
 
-          <p>Estar em terapia de casal é encontrar um lugar seguro e aberto para os diálogos que movimentam a relação, é estar em um espaço que facilita as conversas mais difíceis, que muitas vezes não se consegue abordar sozinhos na relação, e observar de diferentes ângulos a dinâmica de cada casal.</p>
+          <div className="c-for-who__type">
+            <img src={cHands2} alt=""/>
 
-          <button>Como funciona</button>
+            <h3>Terapia de Casal</h3>
+
+            <p>Estar em terapia de casal é encontrar um lugar seguro e aberto para os diálogos que movimentam a relação, é estar em um espaço que facilita as conversas mais difíceis, que muitas vezes não se consegue abordar sozinhos na relação, e observar de diferentes ângulos a dinâmica de cada casal.</p>
+
+            <button>Como funciona</button>
+          </div>
         </div>
       </div>
     </section>
