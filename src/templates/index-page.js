@@ -5,9 +5,9 @@ import cSlides1 from "../img/c-slides-1.jpg";
 import cHands1 from "../img/c-hands-1.jpg";
 import cHands2 from "../img/c-hands-2.jpg";
 import cAboutBarbara from "../img/c-about-barbara.jpg";
+import cContactWhats from "../img/c-contact-whats.svg";
 import { faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons'
 import { faCircle as faCircleSolid } from '@fortawesome/free-solid-svg-icons'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 import Layout from '../components/LayoutLandingPage'
 import Features from '../components/Features'
@@ -115,14 +115,14 @@ export const IndexPageTemplate = ({
       </div>
     </section>
 
-    <section className="c-contato">
+    <section className="c-contact">
       <div className="c-container">
         <h2>Contato</h2>
 
         <div className="c-whatsapp">
           <p>Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.</p>
 
-          <button><FontAwesomeIcon icon={faWhatsapp} /> Vamos conversar</button>
+          <button onClick={window.open('https://wa.me/554899532660', '_blank')}><img src={cContactWhats} alt="Icone do whatsapp" /> Vamos conversar</button>
         </div>
       </div>
     </section>
