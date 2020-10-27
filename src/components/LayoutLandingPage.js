@@ -54,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <SocialNetworks/>
       <div>{children}</div>
-      <Footer />
+      {/*<Footer />*/}
     </div>
   )
 }

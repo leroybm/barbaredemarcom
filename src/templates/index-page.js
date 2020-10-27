@@ -122,10 +122,45 @@ export const IndexPageTemplate = ({
         <div className="c-whatsapp">
           <p>Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.</p>
 
-          <button onClick={window.open('https://wa.me/554899532660', '_blank')}><img src={cContactWhats} alt="Icone do whatsapp" /> Vamos conversar</button>
+          <button onClick={() => window.open('https://wa.me/554899532660', '_blank')}><img src={cContactWhats} alt="Icone do whatsapp" /> Vamos conversar</button>
         </div>
       </div>
     </section>
+
+    <section className="c-blog">
+      <div className="c-container">
+        <h2>Blog</h2>
+
+        <div className="c-post-list">
+          <div className="c-post">
+            <img src="https://placehold.it/300x300" alt=""/>
+            <strong>Lorem Ispum</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="">Continue lendo</a>
+          </div>
+
+          <div className="c-post">
+            <img src="https://placehold.it/300x300" alt=""/>
+            <strong>Lorem Ispum</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="">Continue lendo</a>
+          </div>
+
+          <div className="c-post">
+            <img src="https://placehold.it/300x300" alt=""/>
+            <strong>Lorem Ispum</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="">Continue lendo</a>
+          </div>
+        </div>
+
+        <a href="">Mais publicações</a>
+      </div>
+    </section>
+
+    <div className="c-footer-thing">
+
+    </div>
 
     <div
       className="full-width-image margin-top-0"
@@ -135,6 +170,7 @@ export const IndexPageTemplate = ({
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
+        display: 'none'
       }}
     >
       <div
@@ -175,7 +211,7 @@ export const IndexPageTemplate = ({
         </h3>
       </div>
     </div>
-    <section className="section section--gradient">
+    <section style={{ display: 'none' }} className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">

@@ -265,3 +265,69 @@ button
 
       img
         margin-right: 8px
+// Landing Page - "Blog"
+.c-blog
+  padding: 179px 0 140px
+
+  h2
+    font-family: $font-amatic
+    font-style: normal
+    font-weight: normal
+    font-size: 90px
+    line-height: 113px
+    text-align: center
+    margin-bottom: 105px
+
+  .c-container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & > a
+      @extend %button-round
+      color: #000
+
+  .c-post-list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 105px
+    margin-bottom: 64px
+
+  .c-post
+    img
+      margin-bottom: 16px
+
+    strong
+      font-family: $font-amatic
+      font-style: normal
+      font-weight: normal
+      font-size: 40px
+      line-height: 50px
+      text-align: center
+      display: block
+      margin-bottom: 8px
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 20px
+      text-align: justify
+      margin-bottom: 8px
+
+    a
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 18px
+      line-height: 22px
+      display: block
+      letter-spacing: -0.04em
+      text-transform: uppercase
+      text-align: center
+      color: #000
+// Landing Page - ???
+.c-footer-thing
+  height: 150px
+  background: $barbara-blue
