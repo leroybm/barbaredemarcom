@@ -1,3 +1,50 @@
+// Vars
+$barbara-blue: linear-gradient(180deg, #2888AD 0%, #0378A6 100%)
+
+$font-amatic: 'Amatic SC', cursive
+$font-quicksand: 'Quicksand', sans-serif
+
+$body-padding: 72px
+
+// Overwriting defaults
+button
+  cursor: pointer
+
+  &:focus
+    outline: none
+
+// CSS Snippets
+%flex-center-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+%button-round
+  font-family: $font-quicksand
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 20px
+  background: #FFFFFF
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.14), 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 8px rgba(0, 0, 0, 0.2)
+  border-radius: 50px
+  padding: 16px 24px
+  text-transform: uppercase
+  border: none
+
+%page-title
+  font-family: $font-amatic
+  font-style: normal
+  font-weight: normal
+  font-size: 90px
+  line-height: 113px
+  text-align: center
+
+// General layout classes
+.c-container
+  max-width: 1110px
+  margin: 0 auto
+
 // Landing page header
 .c-header-landing-page
   background: url('../img/c-header-landing-page.jpg') no-repeat fixed center
@@ -6,7 +53,8 @@
   height: 100vh
 
   .c-container
-    max-width: 1110px
+    max-width: none !important
+    padding: 0 $body-padding 0
 
   .c-navbar
     background: transparent
@@ -15,18 +63,22 @@
     font-size: 24px
     line-height: 28px
     color: rgba(0, 0, 0, 0.7)
-    font-variant-caps: small-caps
-    font-family: "Roboto", sans-serif
+    text-transform: uppercase
+    font-family: $font-quicksand
+    padding: 0 16px
+
+    &:first-of-type
+      padding-left: 0
 
   .c-logo
     display: block
     margin-top: 130px
-    margin-left: 177px
+    margin-left: 488px
 
 // Floating bottom left social network icons
 .c-social-networks
   position: fixed
-  left: 72px
+  left: $body-padding
   bottom: 64px
 
   a
@@ -40,3 +92,242 @@
 
   svg
     display: block
+// Landing Page - "O que é..."
+.c-what-is-therapy
+  background: $barbara-blue
+  color: #fff
+  padding: 85px 0
+
+  .c-container
+    @extend %flex-center-center
+    flex-direction: column
+
+  h2
+    @extend %page-title
+    margin-bottom: 40px
+
+  p
+    font-family: $font-quicksand
+    font-size: 19px
+    text-align: center
+
+// Landing Page - Carousel
+.c-types-of-therapy
+  padding: 180px 0 78px
+  background: url('../img/bg_horizontal_line 2.svg') no-repeat bottom
+
+  .c-slides-nav
+    margin-top: 177px
+
+    nav
+      display: flex
+      justify-content: center
+      align-items: center
+
+      button
+        background: none
+        border: none
+        font-size: 35px
+        padding: 0
+        margin-right: 24px
+        color: #9E9E9E
+        cursor: pointer
+
+  .c-slide
+    display: flex
+    justify-content: space-between
+    align-items: start
+
+  .c-slide-image
+    min-width: 405px
+    margin-right: 75px
+
+  .c-slide-body
+    h3
+      font-family: $font-amatic
+      font-size: 70px
+      line-height: 88px
+      text-align: justify
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+
+// Landing Page - "Para quem"
+.c-for-who
+  padding-top: 180px
+
+  .c-container
+    max-width: 1010px
+
+  h2
+    @extend %page-title
+
+  .c-for-who__types
+    padding-top: 104px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 180px
+
+  .c-for-who__type
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex: 1 1 0
+    max-width: 445px
+
+    img
+      margin-bottom: 24px
+
+    h3
+      font-family: $font-amatic
+      font-style: normal
+      font-weight: normal
+      font-size: 60px
+      line-height: 76px
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      text-align: center
+      margin-bottom: 24px
+
+    button
+      @extend %button-round
+
+// Landing Page - "Quem faz"
+.c-about-barbara
+  margin-bottom: 180px
+
+  h2
+    @extend %page-title
+    margin-bottom: 105px
+
+  .c-columns
+    display: flex
+
+  .c-about
+    margin-right: 35px
+    max-width: 555px
+    display: flex
+    flex-direction: column
+    flex: 1 1
+    align-items: center
+
+    p
+      text-align: center
+      padding: 40px 0
+
+    button
+      @extend %button-round
+      padding: 16px 40px
+// Landing Page - "Contato"
+.c-contact
+  background: $barbara-blue
+  color: #fff
+  padding: 140px 0
+
+  h2
+    @extend %page-title
+    font-size: 120px
+    line-height: 151px
+
+  .c-container
+    width: 976px
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+
+  .c-whatsapp
+    padding-top: 20px
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 27px
+      display: flex
+      align-items: center
+      margin-bottom: 23px
+      width: 555px
+
+    button
+      @extend %button-round
+      display: flex
+
+      img
+        margin-right: 8px
+// Landing Page - "Blog"
+.c-blog
+  padding: 179px 0 140px
+
+  h2
+    font-family: $font-amatic
+    font-style: normal
+    font-weight: normal
+    font-size: 90px
+    line-height: 113px
+    text-align: center
+    margin-bottom: 105px
+
+  .c-container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & > a
+      @extend %button-round
+      color: #000
+
+  .c-post-list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 105px
+    margin-bottom: 64px
+
+  .c-post
+    img
+      margin-bottom: 16px
+
+    strong
+      font-family: $font-amatic
+      font-style: normal
+      font-weight: normal
+      font-size: 40px
+      line-height: 50px
+      text-align: center
+      display: block
+      margin-bottom: 8px
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 20px
+      text-align: justify
+      margin-bottom: 8px
+
+    a
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 18px
+      line-height: 22px
+      display: block
+      letter-spacing: -0.04em
+      text-transform: uppercase
+      text-align: center
+      color: #000
+// Landing Page - ???
+.c-footer-thing
+  height: 150px
+  background: $barbara-blue
