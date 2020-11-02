@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import cSlides1 from "../img/c-slides-1.jpg";
 import cHands1 from "../img/c-hands-1.jpg";
 import cHands2 from "../img/c-hands-2.jpg";
 import cAboutBarbara from "../img/c-about-barbara.jpg";
@@ -33,7 +32,7 @@ export const IndexPageTemplate = ({
         <div className="c-slides">
           <div className="c-slide">
             <div className="c-slide-image">
-              <img src={cSlides1} alt="" />
+              <img src={typesOfTherapy.image1 && typesOfTherapy.image1.childImageSharp.fluid.src} alt={typesOfTherapy.image1alt} />
             </div>
             <div className="c-slide-body">
               <h3>{typesOfTherapy.title1}</h3>
@@ -43,7 +42,7 @@ export const IndexPageTemplate = ({
 
           <div className="c-slide" style={{ 'display': 'none' }}>
             <div className="c-slide-image">
-              <img src={cSlides1} alt="" />
+              <img src={typesOfTherapy.image2 && typesOfTherapy.image2.childImageSharp.fluid.src} alt={typesOfTherapy.image2alt} />
             </div>
             <div className="c-slide-body">
               <h3>{typesOfTherapy.title2}</h3>
@@ -53,7 +52,7 @@ export const IndexPageTemplate = ({
 
           <div className="c-slide" style={{ 'display': 'none' }}>
             <div className="c-slide-image">
-              <img src={cSlides1} alt="" />
+              <img src={typesOfTherapy.image2 && typesOfTherapy.image3.childImageSharp.fluid.src} alt={typesOfTherapy.image3alt} />
             </div>
             <div className="c-slide-body">
               <h3>{typesOfTherapy.title3}</h3>
@@ -144,25 +143,25 @@ export const IndexPageTemplate = ({
             <img src="https://placehold.it/300x300" alt=""/>
             <strong>Lorem Ispum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="">Continue lendo</a>
+            <a href="#a">Continue lendo</a>
           </div>
 
           <div className="c-post">
             <img src="https://placehold.it/300x300" alt=""/>
             <strong>Lorem Ispum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="">Continue lendo</a>
+            <a href="#a">Continue lendo</a>
           </div>
 
           <div className="c-post">
             <img src="https://placehold.it/300x300" alt=""/>
             <strong>Lorem Ispum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="">Continue lendo</a>
+            <a href="#a">Continue lendo</a>
           </div>
         </div>
 
-        <a href="">Mais publicações</a>
+        <a href="#a">Mais publicações</a>
       </div>
     </section>
 
@@ -253,10 +252,33 @@ export const pageQuery = graphql`
         typesOfTherapy {
           title1
           body1
-          title2
+          image1 {
+            childImageSharp {
+              fluid(maxWidth: 405, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image1alt
           body2
+          image2 {
+            childImageSharp {
+              fluid(maxWidth: 405, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image2alt
           title3
           body3
+          image3 {
+            childImageSharp {
+              fluid(maxWidth: 405, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image3alt
         }
         forWho {
           title

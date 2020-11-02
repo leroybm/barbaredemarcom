@@ -23,6 +23,8 @@ typesOfTherapy:
 
 
     “A vida fica mais leve quando a gente vive pra gente”
+  image1: /img/c-slides-1.jpg
+  image1alt: todo
   title2: PARA ENCONTRAR A SI MESMO
   body2: >
     Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
@@ -35,6 +37,8 @@ typesOfTherapy:
 
 
     “A vida fica mais leve quando a gente vive pra gente”
+  image2: /img/c-slides-1.jpg
+  image2alt: todo
   title3: PARA ENCONTRAR A SI MESMO
   body3: >
     Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
@@ -47,6 +51,8 @@ typesOfTherapy:
 
 
     “A vida fica mais leve quando a gente vive pra gente”
+  image3: /img/c-slides-1.jpg
+  image3alt: todo
 forWho:
   title: Para quem
   buttonLabel: Como funciona
