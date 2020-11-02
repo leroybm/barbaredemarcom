@@ -1,10 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
 import Navbar from '../components/NavbarLandingPage'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
 import SocialNetworks from "./SocialNetworks";
 
 const TemplateWrapper = ({ children }) => {

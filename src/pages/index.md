@@ -1,80 +1,85 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
-mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
-intro:
-  blurbs:
-    - image: /img/coffee.png
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
 whatIsTherapy:
-  title: O que é?
+  title: O que é
   body: >
-    Estar em terapia é encontrar novas de dialogar com aquelas partes da
-    nossa  história que preocupam, tiram o sono, invadem a vida ou que ainda não
-    temos  entendimento. É ter acesso a uma  linguagem própria, criar
-    significados,  possibilidades e através das conversas e da expressão
-    conseguir relatar a nós  mesmos, por nós mesmos, gerando conexões com as
-    nossas histórias de vida,   compreendendo melhor nossas versões, quem nos
-    tornamos no passado, como vivemos  o presente e buscando ampliar nossa visão
-    de nós mesmos no futuro.
+    Estar em terapia é encontrar novas de dialogar com aquelas partes da nossa 
+    história que preocupam, tiram o sono, invadem a vida ou que ainda não temos 
+    entendimento. É ter acesso a uma  linguagem própria, criar significados, 
+    possibilidades e através das conversas e da expressão conseguir relatar a nós 
+    mesmos, por nós mesmos, gerando conexões com as nossas histórias de vida,  
+    compreendendo melhor nossas versões, quem nos tornamos no passado, como vivemos 
+    o presente e buscando ampliar nossa visão de nós mesmos no futuro.
+typesOfTherapy:
+  title1: PARA ENCONTRAR A SI MESMO
+  body1: >
+    Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
+
+
+    Encontrar a si mesmo é um processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e com maior confiança alcançar o equilíbrio na vida pessoal e profissional.
+
+
+    A terapia traz a compreensão de quem se é, e como viver no mundo quebrando ciclos e gerando liberdade.
+
+
+    “A vida fica mais leve quando a gente vive pra gente”
+  image1: /img/c-slides-1.jpg
+  image1alt: todo
+  title2: PARA ENCONTRAR A SI MESMO
+  body2: >
+    Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
+
+
+    Encontrar a si mesmo é um processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e com maior confiança alcançar o equilíbrio na vida pessoal e profissional.
+
+
+    A terapia traz a compreensão de quem se é, e como viver no mundo quebrando ciclos e gerando liberdade.
+
+
+    “A vida fica mais leve quando a gente vive pra gente”
+  image2: /img/c-slides-1.jpg
+  image2alt: todo
+  title3: PARA ENCONTRAR A SI MESMO
+  body3: >
+    Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
+
+
+    Encontrar a si mesmo é um processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e com maior confiança alcançar o equilíbrio na vida pessoal e profissional.
+
+
+    A terapia traz a compreensão de quem se é, e como viver no mundo quebrando ciclos e gerando liberdade.
+
+
+    “A vida fica mais leve quando a gente vive pra gente”
+  image3: /img/c-slides-1.jpg
+  image3alt: todo
+forWho:
+  title: Para quem
+  buttonLabel: Como funciona
+  types:
+    individual:
+      title: Terapia Individual
+      body: >
+        São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!
+      url: /terapia-individual
+    couple:
+      title: Terapia de Casal
+      body: >
+        Estar em terapia de casal é encontrar um lugar seguro e aberto para os diálogos que movimentam a relação, é estar em um espaço que facilita as conversas mais difíceis, que muitas vezes não se consegue abordar sozinhos na relação, e observar de diferentes ângulos a dinâmica de cada casal.
+      url: /terapia-de-casal
+aboutBarbara:
+  title: Quem faz
+  body: >
+    Bárbara Demarco, é terapeuta, palestrante, consultora e analista, aventureira no mundo da escrita, onde expressa o seu sentir e criatividade. Através de seu trabalho ela busca ajudar outras pessoas a criar novas possibilidades e resultados, para seus clientes, organizações e para si mesmas.
+
+
+    Sua prática terapêutica é norteada pelo Construcionismo Social e pelas práticas pós modernas da Terapia Narrativa e da Terapia Colaborativa e Dialógica. Ela incorpora sua própria crença na aprendizagem como um processo de vida, incentivando e desafiando as pessoas a serem curiosas, criativas e autênticas e protagonistas do seu processo.
+  url: /sobre-barbara
+  buttonLabel: Mais sobre mim
+  imgAlt: None
+contact: 
+  title: Contato
+  body: Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.
+  buttonLabel:  Vamos conversar
+  whatsappNumber: 554899532660
 ---
