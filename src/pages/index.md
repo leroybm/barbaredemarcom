@@ -62,11 +62,15 @@ forWho:
       body: >
         São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!
       url: /terapia-individual
+      imgAlt: Terapia Individual
+      image: /img/c-hands-1.jpg
     couple:
       title: Terapia de Casal
       body: >
         Estar em terapia de casal é encontrar um lugar seguro e aberto para os diálogos que movimentam a relação, é estar em um espaço que facilita as conversas mais difíceis, que muitas vezes não se consegue abordar sozinhos na relação, e observar de diferentes ângulos a dinâmica de cada casal.
       url: /terapia-de-casal
+      imgAlt: Terapia de Casal
+      image: /img/c-hands-2.jpg
 aboutBarbara:
   title: Quem faz
   body: >
@@ -77,6 +81,7 @@ aboutBarbara:
   url: /sobre-barbara
   buttonLabel: Mais sobre mim
   imgAlt: None
+  image: /img/c-about-barbara.jpg
 contact: 
   title: Contato
   body: Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.

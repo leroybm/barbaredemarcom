@@ -1,9 +1,7 @@
+import { get } from 'lodash'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import cHands1 from "../img/c-hands-1.jpg";
-import cHands2 from "../img/c-hands-2.jpg";
-import cAboutBarbara from "../img/c-about-barbara.jpg";
 import cContactWhats from "../img/c-contact-whats.svg";
 import { faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons'
 import { faCircle as faCircleSolid } from '@fortawesome/free-solid-svg-icons'
@@ -32,7 +30,7 @@ export const IndexPageTemplate = ({
         <div className="c-slides">
           <div className="c-slide">
             <div className="c-slide-image">
-              <img src={typesOfTherapy.image1 && typesOfTherapy.image1.childImageSharp.fluid.src} alt={typesOfTherapy.image1alt} />
+              <img src={get(typesOfTherapy, 'image1.childImageSharp.fluid.src', '')} alt={typesOfTherapy.image1alt} />
             </div>
             <div className="c-slide-body">
               <h3>{typesOfTherapy.title1}</h3>
@@ -42,7 +40,7 @@ export const IndexPageTemplate = ({
 
           <div className="c-slide" style={{ 'display': 'none' }}>
             <div className="c-slide-image">
-              <img src={typesOfTherapy.image2 && typesOfTherapy.image2.childImageSharp.fluid.src} alt={typesOfTherapy.image2alt} />
+              <img src={get(typesOfTherapy, 'image2.childImageSharp.fluid.src', '')} alt={typesOfTherapy.image2alt} />
             </div>
             <div className="c-slide-body">
               <h3>{typesOfTherapy.title2}</h3>
@@ -52,7 +50,7 @@ export const IndexPageTemplate = ({
 
           <div className="c-slide" style={{ 'display': 'none' }}>
             <div className="c-slide-image">
-              <img src={typesOfTherapy.image2 && typesOfTherapy.image3.childImageSharp.fluid.src} alt={typesOfTherapy.image3alt} />
+              <img src={get(typesOfTherapy, 'image3.childImageSharp.fluid.src', '')} alt={typesOfTherapy.image3alt} />
             </div>
             <div className="c-slide-body">
               <h3>{typesOfTherapy.title3}</h3>
@@ -83,7 +81,7 @@ export const IndexPageTemplate = ({
 
         <div className="c-for-who__types">
           <div className="c-for-who__type">
-            <img src={cHands1} alt=""/>
+            <img src={get(forWho, 'types.individual.image.childImageSharp.fluid.src', '')} alt={forWho.types.individual.imgAlt}/>
 
             <h3>{forWho.types.individual.title}</h3>
 
@@ -93,7 +91,7 @@ export const IndexPageTemplate = ({
           </div>
 
           <div className="c-for-who__type">
-            <img src={cHands2} alt=""/>
+            <img src={get(forWho, 'types.couple.image.childImageSharp.fluid.src', '')} alt={forWho.types.couple.imgAlt}/>
 
             <h3>{forWho.types.couple.title}</h3>
 
@@ -116,7 +114,7 @@ export const IndexPageTemplate = ({
             <Link to={aboutBarbara.url}>{aboutBarbara.buttonLabel}</Link>
           </div>
           <div className="c-photo">
-            <img src={cAboutBarbara} alt={aboutBarbara.imgAlt} />
+            <img src={get(aboutBarbara, 'image.childImageSharp.fluid.src', '')} alt={aboutBarbara.imgAlt} />
           </div>
         </div>
       </div>
@@ -288,11 +286,27 @@ export const pageQuery = graphql`
               title
               body
               url
+              imgAlt
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 395, quality: 80) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             couple {
               title
               body
               url
+              imgAlt
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 395, quality: 80) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
@@ -302,6 +316,13 @@ export const pageQuery = graphql`
           url
           buttonLabel
           imgAlt
+          image {
+            childImageSharp {
+              fluid(maxWidth: 485, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         contact {
           title

@@ -7,57 +7,325 @@ backend:
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
-
 media_folder: static/img
 public_folder: /img
-
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: blog
+    label: Blog
+    folder: src/pages/blog
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-
-  - name: "pages"
-    label: "Pages"
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: blog-post
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+      - label: Featured Post
+        name: featuredpost
+        widget: boolean
+      - label: Featured Image
+        name: featuredimage
+        widget: image
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Tags
+        name: tags
+        widget: list
+  - name: pages
+    label: Pages
     files:
-      - file: "src/pages/index.md"
-        label: "Pagina inicial"
-        name: "index"
+      - file: src/pages/index.md
+        label: Pagina inicial
+        name: index
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: O que é terapia, name: whatIsTherapy, widget: object, fields: [{label: Titulo, name: title, widget: string}, {label: Corpo, name: body, widget: text}]}
-          - {label: Tipos de terapia, name: typesOfTherapy, widget: object, fields: [{label: Titulo 1, name: title1, widget: string}, {label: Corpo 1, name: body1, widget: text}, {label: Imagem 1, name: image1, widget: image}, {label: Descrição da Imagem 1, name: image1alt, type: string}, {label: Titulo 2, name: title2, widget: string}, {label: Corpo 2, name: body2, widget: text}, {label: Imagem 2, name: image2, widget: image}, {label: Descrição da Imagem 2, name: image2alt, type: string}, {label: Titulo 3, name: title3, widget: string}, {label: Corpo 3, name: body3, widget: text}, {label: Imagem 3, name: image3, widget: image}, {label: Descrição da Imagem 3, name: image3alt, type: string}]}
-          - {label: Para quem, name: forWho, widget: object, fields: [{label: Titulo, name: title, widget: string}, {label: Texto do botão, name: buttonLabel, widget: string}, {label: Tipos, name: types, widget: object, fields: [{label: Individual, name: individual, widget: object, fields: [{label: Titulo, name: title, widget: string}, {label: Corpo, name: body, type: text}, {label: URL, name: url, widget: string}]}, {label: Casal, name: couple, widget: object, fields: [{label: Titulo, name: title, widget: string}, {label: Corpo, name: body, type: text}, {label: URL, name: url, widget: string}]}]}]}
-          - {label: Quem Faz , name: aboutBarbara, widget: object, fields: [{label: Titulo, name: title, widget: string}, {label: Corpo, name: body, widget: text}, {label: URL, name: url, type: string}, {label: Texto do botão, name: buttonLabel, type: string}, {label: Descrição da imagem, name: imgAlt, type: string}]}
-          - {label: Contato, name: contact, widget: object, fields: [{label: Titulo, name: title, widget: string}, {label: Corpo, name: body, widget: text}, {label: Texto do botão, name: buttonLabel, type: string}, {label: Whatsapp, name: whatsappNumber, type: string}]}
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: index-page
+          - label: O que é terapia
+            name: whatIsTherapy
+            widget: object
+            fields:
+              - label: Titulo
+                name: title
+                widget: string
+              - label: Corpo
+                name: body
+                widget: text
+
+          - label: Tipos de terapia
+            name: typesOfTherapy
+            widget: object
+            fields:
+              - label: Titulo 1
+                name: title1
+                widget: string
+              - label: Corpo 1
+                name: body1
+                widget: text
+              - label: Imagem 1
+                name: image1
+                widget: image
+              - label: Descrição da Imagem 1
+                name: image1alt
+                type: string
+              - label: Titulo 2
+                name: title2
+                widget: string
+              - label: Corpo 2
+                name: body2
+                widget: text
+              - label: Imagem 2
+                name: image2
+                widget: image
+              - label: Descrição da Imagem 2
+                name: image2alt
+                type: string
+              - label: Titulo 3
+                name: title3
+                widget: string
+              - label: Corpo 3
+                name: body3
+                widget: text
+              - label: Imagem 3
+                name: image3
+                widget: image
+              - label: Descrição da Imagem 3
+                name: image3alt
+                type: string
+
+          - label: Para quem
+            name: forWho
+            widget: object
+            fields:
+              - label: Titulo
+                name: title
+                widget: string
+              - label: Texto do botão
+                name: buttonLabel
+                widget: string
+              - label: Tipos
+                name: types
+                widget: object
+                fields:
+                  - label: Individual
+                    name: individual
+                    widget: object
+                    fields:
+                      - label: Titulo
+                        name: title
+                        widget: string
+                      - label: Corpo
+                        name: body
+                        type: text
+                      - label: URL
+                        name: url
+                        widget: string
+                      - label: Descrição da imagem
+                        name: imgAlt
+                        widget: string
+                      - label: Imagem
+                        name: imagem
+                        widget: image
+                  - label: Casal
+                    name: couple
+                    widget: object
+                    fields:
+                      - label: Titulo
+                        name: title
+                        widget: string
+                      - label: Corpo
+                        name: body
+                        type: text
+                      - label: URL
+                        name: url
+                        widget: string
+                      - label: Descrição da imagem
+                        name: imgAlt
+                        widget: string
+                      - label: Imagem
+                        name: imagem
+                        widget: image
+
+          - label: Quem Faz
+            name: aboutBarbara
+            widget: object
+            fields:
+              - label: Titulo
+                name: title
+                widget: string
+              - label: Corpo
+                name: body
+                widget: text
+              - label: URL
+                name: url
+                type: string
+              - label: Texto do botão
+                name: buttonLabel
+                type: string
+              - label: Descrição da imagem
+                name: imgAlt
+                type: string
+              - label: Imagem
+                name: imagem
+                widget: image
+
+          - label: Contato
+            name: contact
+            widget: object
+            fields:
+              - label: Titulo
+                name: title
+                widget: string
+              - label: Corpo
+                name: body
+                widget: text
+              - label: Texto do botão
+                name: buttonLabel
+                type: string
+              - label: Whatsapp
+                name: whatsappNumber
+                type: string
+      - file: src/pages/about/index.md
+        label: About
+        name: about
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: about-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/products/index.md
+        label: Products Page
+        name: products
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: product-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Blurbs
+                name: blurbs
+                widget: list
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Text
+                    name: text
+                    widget: text
+          - label: Main
+            name: main
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Image1
+                name: image1
+                widget: object
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Alt
+                    name: alt
+                    widget: string
+              - label: Image2
+                name: image2
+                widget: object
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Alt
+                    name: alt
+                    widget: string
+              - label: Image3
+                name: image3
+                widget: object
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Alt
+                    name: alt
+                    widget: string
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - label: Quote
+                name: quote
+                widget: string
+              - label: Author
+                name: author
+                widget: string
+          - label: Full_image
+            name: full_image
+            widget: image
+          - label: Pricing
+            name: pricing
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: string
+              - label: Plans
+                name: plans
+                widget: list
+                fields:
+                  - label: Plan
+                    name: plan
+                    widget: string
+                  - label: Price
+                    name: price
+                    widget: string
+                  - label: Description
+                    name: description
+                    widget: string
+                  - label: Items
+                    name: items
+                    widget: list
