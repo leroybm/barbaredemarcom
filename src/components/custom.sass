@@ -5,6 +5,7 @@ $font-amatic: 'Amatic SC', cursive
 $font-quicksand: 'Quicksand', sans-serif
 
 $body-padding: 72px
+$body-padding-mobile: 24px
 
 // Overwriting defaults
 button
@@ -12,6 +13,12 @@ button
 
   &:focus
     outline: none
+
+$mobile-width: 768px
+
+@mixin mobile 
+  @media (max-width: $mobile-width)
+    @content;
 
 // CSS Snippets
 %flex-center-center
@@ -26,12 +33,18 @@ button
   font-size: 16px
   line-height: 20px
   background: #FFFFFF
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.14), 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 8px rgba(0, 0, 0, 0.2)
+  box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.14)
   border-radius: 50px
   padding: 16px 24px
   text-transform: uppercase
   border: none
   color: #363636
+  transition: transform 100ms, box-shadow 100ms
+
+  &:hover
+    transform: scale(1.01)
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.2)
+    transform-origin: center
 
 %page-title
   font-family: $font-amatic
@@ -46,6 +59,11 @@ button
   max-width: 1110px
   margin: 0 auto
 
+  @include mobile
+    width: 100%
+    padding: 0 $body-padding-mobile
+    
+
 // Landing page header
 .c-header-landing-page
   background: url('../img/c-header-landing-page.jpg') no-repeat fixed center
@@ -53,12 +71,22 @@ button
   padding-top: 90px
   height: 100vh
 
+  @include mobile
+    padding-top: $body-padding-mobile
+
   .c-container
     max-width: none !important
     padding: 0 $body-padding 0
 
+    @include mobile
+      padding: 0 $body-padding-mobile 0
+
   .c-navbar
     background: transparent
+
+    @include mobile
+      height: 24px
+      min-height: 0
 
   .c-navbar-item
     font-size: 24px
@@ -68,6 +96,14 @@ button
     font-family: $font-quicksand
     padding: 0 16px
 
+    @include mobile
+      text-align: left
+      padding-left: 64px
+      margin-bottom: 32px
+
+      &:last-of-type
+        margin-bottom: 0
+
     &:first-of-type
       padding-left: 0
 
@@ -76,11 +112,60 @@ button
     margin-top: 130px
     margin-left: 488px
 
+    img
+      width: 200px
+
+    @include mobile
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 116px 0 0
+
+      img
+        width: 150px
+
+  @include mobile
+    .c-hamburger-menu
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      text-transform: uppercase
+      background: transparent
+      margin: 0
+
+    .c-nav-menu
+      display: block
+      position: fixed
+      width: 100vw
+      height: 100vh
+      top: 0
+      left: -100vw
+      transition: left 250ms
+
+      &.is-active
+        left: 0
+
+    .c-navbar-start
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+
 // Floating bottom left social network icons
 .c-social-networks
   position: fixed
   left: $body-padding
   bottom: 64px
+
+  @include mobile
+    display: flex
+    position: absolute
+    left: auto
+    bottom: auto
+    top: $body-padding-mobile
+    right: $body-padding-mobile
 
   a
     color: #88A4AE
@@ -88,8 +173,17 @@ button
     height: 35px
     display: block
 
+    @include mobile
+      font-size: 24px
+      height: 24px
+      color: rgba(0, 0, 0, 0.6)
+
     &:not(:last-of-type)
       margin-bottom: 22px
+
+      @include mobile
+        margin-bottom: 0
+        margin-right: 22px
 
   svg
     display: block
@@ -100,6 +194,9 @@ button
   color: #fff
   padding: 85px 0
 
+  @include mobile
+    padding: 48px 0 56px
+
   .c-container
     @extend %flex-center-center
     flex-direction: column
@@ -108,18 +205,33 @@ button
     @extend %page-title
     margin-bottom: 40px
 
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+      margin-bottom: $body-padding-mobile
+
   p
     font-family: $font-quicksand
     font-size: 19px
     text-align: center
+
+    @include mobile
+      font-size: 16px
+      line-height: 20px
 
 // Landing Page - Carousel
 .c-types-of-therapy
   padding: 180px 0 78px
   background: url('../img/bg_horizontal_line 2.svg') no-repeat bottom
 
+  @include mobile
+    padding: 56px 0 39px
+
   .c-slides-nav
     margin-top: 177px
+
+    @include mobile
+      margin-top: 2 * $body-padding-mobile
 
     nav
       display: flex
@@ -135,14 +247,25 @@ button
         color: #9E9E9E
         cursor: pointer
 
+        @include mobile
+          font-size: $body-padding-mobile
+
   .c-slide
     display: flex
     justify-content: space-between
     align-items: flex-start
 
+    @include mobile
+      flex-direction: column
+
   .c-slide-image
     min-width: 405px
     margin-right: 75px
+
+    @include mobile
+      min-width: calc(100vw - (2 * #{$body-padding-mobile}))
+      margin-bottom: $body-padding-mobile
+      margin-right: 0
 
   .c-slide-body
     h3
@@ -151,6 +274,12 @@ button
       line-height: 88px
       text-align: justify
 
+      @include mobile
+        font-size: 48px
+        line-height: 48px
+        text-align: center
+        margin-bottom: 16px
+
     p
       font-family: $font-quicksand
       font-style: normal
@@ -158,6 +287,11 @@ button
       font-size: 18px
       line-height: 22px
       white-space: pre-wrap
+
+      @include mobile
+        font-size: 16px
+        line-height: 20px
+        text-align: center
 
 // Landing Page - "Para quem"
 .c-for-who

@@ -1,5 +1,5 @@
-import { get } from 'lodash'
-import React, { useState } from 'react'
+import { debounce, get } from 'lodash'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import cContactWhats from "../img/c-contact-whats.svg";
@@ -20,6 +20,20 @@ export const IndexPageTemplate = ({
   contact,
 }) => {
   let [currentSlide, setCurrentSlide] = useState(0);
+  let [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const verifyIsMobile = debounce(() => {
+      setIsMobile(!window.matchMedia('max-width: 768px').matches);
+    }, 100);
+
+    verifyIsMobile();
+
+    window.addEventListener('resize', verifyIsMobile);
+    return () => {
+       window.removeEventListener('resize', verifyIsMobile);
+    }
+  }, []);
 
   return (
     <main>
@@ -34,8 +48,8 @@ export const IndexPageTemplate = ({
       <section className="c-types-of-therapy">
         <div className="c-container">
           <CarouselProvider
-            naturalSlideWidth={1110}
-            naturalSlideHeight={411}
+            naturalSlideWidth={isMobile ? 327 : 1110}
+            naturalSlideHeight={isMobile ? 1150 : 411}
             totalSlides={3}
           >
             <div class="c-slides">

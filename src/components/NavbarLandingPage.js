@@ -43,23 +43,22 @@ const Navbar = class extends React.Component {
             <div className="navbar-brand">
               {/* Hamburger menu */}
               <div
-                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                className={`c-hamburger-menu navbar-burger burger ${this.state.navBarActiveClass}`}
                 data-target="navMenu"
                 role="button"
                 aria-hidden={true}
                 onClick={() => this.toggleHamburger()}
-                onKeyDown={() => {}}
               >
-                <span />
-                <span />
-                <span />
+                Menu
               </div>
             </div>
             <div
               id="navMenu"
-              className={`navbar-menu ${this.state.navBarActiveClass}`}
+              className={`c-nav-menu navbar-menu ${this.state.navBarActiveClass}`}
+              onClick={() => this.toggleHamburger()}
+              aria-hidden={true}
             >
-              <div className="navbar-start has-text-centered">
+              <div className="c-navbar-start navbar-start has-text-centered">
                 <Link className="c-navbar-item navbar-item" to="/about">
                   O que é
                 </Link>
@@ -81,7 +80,7 @@ const Navbar = class extends React.Component {
         </nav>
         <div className="c-container container">
           <Link to="/" className="c-logo" title="Logo">
-            <img src={logo} alt="Bárbara Demarco" style={{ width: '200px' }} />
+            <img src={logo} alt="Bárbara Demarco" />
           </Link>
         </div>
       </div>
