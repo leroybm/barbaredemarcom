@@ -11,7 +11,7 @@ whatIsTherapy:
     compreendendo melhor nossas versões, quem nos tornamos no passado, como vivemos 
     o presente e buscando ampliar nossa visão de nós mesmos no futuro.
 typesOfTherapy:
-  title1: PARA ENCONTRAR A SI MESMO
+  title1: PARA ENCONTRAR A SI MESMO 1
   body1: >
     Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
 
@@ -25,7 +25,7 @@ typesOfTherapy:
     “A vida fica mais leve quando a gente vive pra gente”
   image1: /img/c-slides-1.jpg
   image1alt: todo
-  title2: PARA ENCONTRAR A SI MESMO
+  title2: PARA ENCONTRAR A SI MESMO 2
   body2: >
     Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
 
@@ -39,7 +39,7 @@ typesOfTherapy:
     “A vida fica mais leve quando a gente vive pra gente”
   image2: /img/c-slides-1.jpg
   image2alt: todo
-  title3: PARA ENCONTRAR A SI MESMO
+  title3: PARA ENCONTRAR A SI MESMO 3
   body3: >
     Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
 
@@ -62,11 +62,15 @@ forWho:
       body: >
         São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!
       url: /terapia-individual
+      imgAlt: Terapia Individual
+      image: /img/c-hands-1.jpg
     couple:
       title: Terapia de Casal
       body: >
         Estar em terapia de casal é encontrar um lugar seguro e aberto para os diálogos que movimentam a relação, é estar em um espaço que facilita as conversas mais difíceis, que muitas vezes não se consegue abordar sozinhos na relação, e observar de diferentes ângulos a dinâmica de cada casal.
       url: /terapia-de-casal
+      imgAlt: Terapia de Casal
+      image: /img/c-hands-2.jpg
 aboutBarbara:
   title: Quem faz
   body: >
@@ -77,6 +81,7 @@ aboutBarbara:
   url: /sobre-barbara
   buttonLabel: Mais sobre mim
   imgAlt: None
+  image: /img/c-about-barbara.jpg
 contact: 
   title: Contato
   body: Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.
