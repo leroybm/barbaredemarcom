@@ -101,6 +101,9 @@ $mobile-width: 768px
       padding-left: 64px
       margin-bottom: 32px
 
+      &:first-of-type
+        padding-left: 64px !important
+
       &:last-of-type
         margin-bottom: 0
 
@@ -297,17 +300,29 @@ $mobile-width: 768px
 .c-for-who
   padding-top: 180px
 
+  @include mobile
+    padding-top: 48px
+
   .c-container
     max-width: 1010px
 
   h2
     @extend %page-title
 
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+
   .c-for-who__types
     padding-top: 104px
     display: flex
     justify-content: space-between
     margin-bottom: 180px
+
+    @include mobile
+      padding-top: 32px
+      flex-direction: column
+      margin-bottom: 0
 
   .c-for-who__type
     display: flex
@@ -316,6 +331,9 @@ $mobile-width: 768px
     align-items: center
     flex: 1 1 0
     max-width: 445px
+
+    @include mobile
+      margin-bottom: 57px
 
     img
       margin-bottom: 24px
@@ -327,6 +345,12 @@ $mobile-width: 768px
       font-size: 60px
       line-height: 76px
 
+      @include mobile
+        font-size: 48px
+        line-height: 48px
+        text-align: center
+        margin-bottom: 16px
+
     p
       font-family: $font-quicksand
       font-style: normal
@@ -335,6 +359,12 @@ $mobile-width: 768px
       line-height: 22px
       text-align: center
       margin-bottom: 24px
+      
+      @include mobile
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
 
     a
       @extend %button-round
@@ -343,12 +373,26 @@ $mobile-width: 768px
 .c-about-barbara
   margin-bottom: 180px
 
+  @include mobile
+    margin-bottom: 57px
+
+    .c-container
+      padding: 0
+
   h2
     @extend %page-title
     margin-bottom: 105px
 
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+      margin-bottom: 24px
+
   .c-columns
     display: flex
+
+    @include mobile
+      flex-direction: column-reverse
 
   .c-about
     margin-right: 35px
@@ -358,9 +402,20 @@ $mobile-width: 768px
     flex: 1 1
     align-items: center
 
+    @include mobile
+      margin: 16px 24px 0
+
     p
       text-align: center
       padding: 40px 0
+
+      @include mobile
+        padding: 0
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+        margin-bottom: 16px
 
     a
       @extend %button-round
@@ -370,12 +425,16 @@ $mobile-width: 768px
 .c-contact
   background: $barbara-blue
   color: #fff
-  padding: 140px 0
+  padding: 48px 0 59px
 
   h2
     @extend %page-title
     font-size: 120px
     line-height: 151px
+
+    @include mobile
+      font-size: 64px
+      line-height: 81px
 
   .c-container
     width: 976px
@@ -383,8 +442,15 @@ $mobile-width: 768px
     justify-content: space-between
     flex-direction: row
 
+    @include mobile
+      width: auto
+      flex-direction: column
+
   .c-whatsapp
     padding-top: 20px
+
+    @include mobile
+      padding-top: 16px
 
     p
       font-family: $font-quicksand
@@ -397,9 +463,18 @@ $mobile-width: 768px
       margin-bottom: 23px
       width: 555px
 
+      @include mobile
+        font-size: 18px
+        line-height: 22px
+        width: auto
+        text-align: center
+
     button
       @extend %button-round
       display: flex
+
+      @include mobile
+        margin: 0 auto
 
       img
         margin-right: 8px
@@ -407,6 +482,9 @@ $mobile-width: 768px
 // Landing Page - "Blog"
 .c-blog
   padding: 179px 0 140px
+
+  @include mobile
+    padding: 56px 0
 
   h2
     font-family: $font-amatic
@@ -416,6 +494,11 @@ $mobile-width: 768px
     line-height: 113px
     text-align: center
     margin-bottom: 105px
+
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+      margin-bottom: 16px
 
   .c-container
     display: flex
@@ -432,9 +515,20 @@ $mobile-width: 768px
     grid-gap: 105px
     margin-bottom: 64px
 
+    @include mobile
+      grid-template-columns: 1fr
+      margin-bottom: 0
+
   .c-post
+    @include mobile
+      &:not(:first-of-type)
+        display: none
+
     img
       margin-bottom: 16px
+
+      @include mobile
+        margin-bottom: 24px
 
     strong
       font-family: $font-amatic
@@ -446,6 +540,11 @@ $mobile-width: 768px
       display: block
       margin-bottom: 8px
 
+      @include mobile
+        font-size: 48px
+        line-height: 48px
+        margin-bottom: 16px
+
     p
       font-family: $font-quicksand
       font-style: normal
@@ -454,6 +553,9 @@ $mobile-width: 768px
       line-height: 20px
       text-align: justify
       margin-bottom: 8px
+
+      @include mobile
+        margin-bottom: 32px
 
     a
       font-family: $font-quicksand
@@ -466,6 +568,9 @@ $mobile-width: 768px
       text-transform: uppercase
       text-align: center
       color: #000
+
+      @include mobile
+        display: none
 
 // Landing Page - ???
 .c-footer-thing
