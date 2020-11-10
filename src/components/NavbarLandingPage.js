@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from "../img/logo.svg";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+const PHRASE_INTERVAL = 10000;
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -8,18 +11,30 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: '',
+      activePhrase: 0
     }
   }
 
+  phrases = [`“Terapia um espaço para produzir entendimento, sobre nós mesmos, sobre nossas vidas e histórias. É caminhar lado a lado com respeito mútuo e encontrar os significados que nos  expressam no mundo”`, `“A Linguagem é construída na própria descrição que se faz do mundo e de si”`]
+
+  getNextPhrase = () => {
+    this.setState({
+      activePhrase: this.state.activePhrase === this.phrases.length - 1 ? 0 : this.state.activePhrase + 1
+    });
+  }
+
+  componentDidMount() {
+    this.timerId = setInterval(() => this.getNextPhrase(), PHRASE_INTERVAL);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerId);
+  }
+
   toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
+    this.setState({
         active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
+      }, () => {
         this.state.active
           ? this.setState({
               navBarActiveClass: 'is-active',
@@ -32,6 +47,15 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    const phrases = this.phrases
+      .filter((phrase, index) => index === this.state.activePhrase)
+      .map((phrase, index) =>
+        <p key={phrase}>
+          {phrase}<br/>
+          <small>Keneth Gergen.</small>
+        </p>
+      );
+
     return (
       <div className="c-header-landing-page">
         <nav
@@ -79,9 +103,22 @@ const Navbar = class extends React.Component {
           </div>
         </nav>
         <div className="c-container container">
-          <Link to="/" className="c-logo" title="Logo">
-            <img src={logo} alt="Bárbara Demarco" />
-          </Link>
+          <div className="c-header-landing-page__main">
+            <Link to="/" className="c-logo" title="Logo">
+              <img src={logo} alt="Bárbara Demarco" />
+            </Link>
+
+            <h3>Terapeuta</h3>
+
+            <div className="c-phrases">
+              <ReactCSSTransitionGroup
+                transitionName="fade"
+                transitionEnterTimeout={5000}
+                transitionLeaveTimeout={5000}>
+                {phrases}
+              </ReactCSSTransitionGroup>
+            </div>
+          </div>
         </div>
       </div>
     )

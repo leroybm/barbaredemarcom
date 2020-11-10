@@ -52,7 +52,7 @@ export const IndexPageTemplate = ({
             naturalSlideHeight={isMobile ? 1150 : 411}
             totalSlides={3}
           >
-            <div class="c-slides">
+            <div className="c-slides">
               <Slider>
                 <Slide index={0}>
                   <div className="c-slide">

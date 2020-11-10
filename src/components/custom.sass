@@ -14,11 +14,29 @@ button
   &:focus
     outline: none
 
+body
+  font-family: $font-quicksand
+
 $mobile-width: 768px
 
 @mixin mobile 
   @media (max-width: $mobile-width)
     @content;
+
+// Animations
+.fade-enter
+  transition: opacity 500ms
+  opacity: 0
+
+  &-active
+    opacity: 1
+
+.fade-leave
+  transition: opacity 500ms
+  opacity: 1
+
+  &-active
+    opacity: 0
 
 // CSS Snippets
 %flex-center-center
@@ -110,22 +128,52 @@ $mobile-width: 768px
     &:first-of-type
       padding-left: 0
 
-  .c-logo
-    display: block
-    margin-top: 130px
-    margin-left: 488px
+  &__main
+    padding-top: 158px
+    width: 100%
+    max-width: 1220px
+    display: flex
+    flex-direction: column
+    align-items: center
 
-    img
-      width: 200px
-
-    @include mobile
-      display: flex
-      justify-content: center
-      align-items: center
-      margin: 116px 0 0
+    .c-logo
+      display: block
+      margin-bottom: 75px
 
       img
-        width: 150px
+        width: 240px
+
+      @include mobile
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 116px 0 0
+
+        img
+          width: 150px
+
+    h3
+      font-size: 48px
+      line-height: 60px
+      text-align: center
+      margin-bottom: 130px
+
+    .c-phrases
+      span
+        position: relative
+        width: 570px
+        display: block
+
+      p
+        position: absolute
+        top: 0
+        font-size: 38px
+        line-height: 47px
+        text-align: center
+        max-width: 570px
+
+        small
+          color: #626465
 
   @include mobile
     .c-hamburger-menu
