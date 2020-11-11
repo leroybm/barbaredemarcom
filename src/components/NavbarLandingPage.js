@@ -15,7 +15,11 @@ const Navbar = class extends React.Component {
     }
   }
 
-  phrases = [`“Terapia um espaço para produzir entendimento, sobre nós mesmos, sobre nossas vidas e histórias. É caminhar lado a lado com respeito mútuo e encontrar os significados que nos  expressam no mundo”`, `“A Linguagem é construída na própria descrição que se faz do mundo e de si”`]
+  phrases = [
+    { id: 0, text: `“Terapia um espaço para produzir entendimento, sobre nós mesmos, sobre nossas vidas e histórias. É caminhar lado a lado com respeito mútuo e encontrar os significados que nos  expressam no mundo”`, author: `Bárbara Demarco` },
+    { id: 1, text: `“A Linguagem é construída na própria descrição que se faz do mundo e de si”`, author: `Keneth Gergen` },
+    { id: 2, text: `“O realmente difícil e realmente admirável abrir mão de ser perfeito e iniciar o trabalho de se tornar você mesmo”`, author: `Anna Quindlen` }
+  ]
 
   getNextPhrase = () => {
     this.setState({
@@ -48,11 +52,11 @@ const Navbar = class extends React.Component {
 
   render() {
     const phrases = this.phrases
-      .filter((phrase, index) => index === this.state.activePhrase)
-      .map((phrase, index) =>
-        <p key={phrase}>
-          {phrase}<br/>
-          <small>Keneth Gergen.</small>
+      .filter(phrase => phrase.id === this.state.activePhrase)
+      .map(phrase =>
+        <p key={phrase.id}>
+          {phrase.text}<br/>
+          <small>{phrase.author}</small>
         </p>
       );
 
@@ -113,8 +117,8 @@ const Navbar = class extends React.Component {
             <div className="c-phrases">
               <ReactCSSTransitionGroup
                 transitionName="fade"
-                transitionEnterTimeout={5000}
-                transitionLeaveTimeout={5000}>
+                transitionEnterTimeout={2500}
+                transitionLeaveTimeout={2500}>
                 {phrases}
               </ReactCSSTransitionGroup>
             </div>
