@@ -11,6 +11,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import BlogRoll from '../components/BlogRoll';
 
 export const IndexPageTemplate = ({
   whatIsTherapy,
@@ -182,36 +183,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-blog" id="blog">
-        <div className="c-container">
-          <h2>Blog</h2>
-  
-          <div className="c-post-list">
-            <div className="c-post">
-              <img src="https://placehold.it/300x300" alt=""/>
-              <strong>Lorem Ispum</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#a">Continue lendo</a>
-            </div>
-  
-            <div className="c-post">
-              <img src="https://placehold.it/300x300" alt=""/>
-              <strong>Lorem Ispum</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#a">Continue lendo</a>
-            </div>
-  
-            <div className="c-post">
-              <img src="https://placehold.it/300x300" alt=""/>
-              <strong>Lorem Ispum</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#a">Continue lendo</a>
-            </div>
-          </div>
-  
-          <a href="#a">Mais publicações</a>
-        </div>
-      </section>
+      <BlogRoll />
   
       <div className="c-footer-thing">
   

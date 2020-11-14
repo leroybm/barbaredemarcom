@@ -5,11 +5,12 @@ import cContactWhats from "../img/c-contact-whats.svg";
 import cInternalIndividualTherapy from "../img/c-internal-individual-therapy.jpg";
 
 import Layout from '../components/Layout'
+import BlogRoll from '../components/BlogRoll';
 
 export const TerapiaIndividualTemplate = () => {
 
   return (
-    <main class="c-internal-therapy-type">
+    <main className="c-internal-therapy-type">
       <div className="c-container container">
         <div>
           <h1>
@@ -39,6 +40,7 @@ export const TerapiaIndividualTemplate = () => {
           <button onClick={() => window.open(`https://wa.me/100`, '_blank')}><img src={cContactWhats} alt="Icone do whatsapp" />Vamos Conversar</button>
         </div>
       </div>
+      <BlogRoll />
     </main>
   )
 }
