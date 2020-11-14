@@ -23,6 +23,9 @@ const TemplateWrapper = ({ children }) => {
       <SocialNetworks/>
       <div>{children}</div>
       {/*<Footer />*/}
+      <div className="c-footer-thing">
+        {/* Mock footer */}
+      </div>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import cContactWhats from "../img/c-contact-whats.svg";
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll';
 
-export const TerapiaIndividualTemplate = ({ data }) => {
+export const TerapiaDeCasalTemplate = ({ data }) => {
   const { title, firstText, image, italicText, secondTitle, secondText, whatsappNumber } = data;
 
   return (
@@ -36,7 +36,7 @@ export const TerapiaIndividualTemplate = ({ data }) => {
   )
 }
 
-TerapiaIndividualTemplate.propTypes = {
+TerapiaDeCasalTemplate.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string,
     firstText: PropTypes.string,
@@ -48,19 +48,19 @@ TerapiaIndividualTemplate.propTypes = {
   })
 }
 
-const TerapiaIndividual = ({ data }) => {
+const TerapiaDeCasal = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <TerapiaIndividualTemplate
+      <TerapiaDeCasalTemplate
         data={frontmatter}
       />
     </Layout>
   )
 }
 
-TerapiaIndividual.propTypes = {
+TerapiaDeCasal.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -68,11 +68,11 @@ TerapiaIndividual.propTypes = {
   }),
 }
 
-export default TerapiaIndividual
+export default TerapiaDeCasal;
 
 export const pageQuery = graphql`
-  query IndividualTherapyTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "terapia-individual" } }) {
+  query TerapiaDeCasalTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "terapia-de-casal" } }) {
       frontmatter {
         title
         firstText

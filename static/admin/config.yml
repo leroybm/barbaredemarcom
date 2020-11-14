@@ -227,6 +227,36 @@ collections:
             name: whatsappNumber
             type: string
 
+      - file: src/pages/terapia-de-casal/index.md
+        label: Terapia de casal
+        name: terapia-de-casal
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: terapia-de-casal
+          - label: Titulo
+            name: title
+            widget: string
+          - label: Primeiro text
+            name: firstText
+            widget: text
+          - label: Imagem
+            name: image
+            widget: image
+          - label: Texto em italico
+            name: italicText
+            widget: text
+          - label: Segundo titulo
+            name: secondTitle
+            widget: string
+          - label: Segundo texto
+            name: secondText
+            widget: text
+          - label: Whatsapp
+            name: whatsappNumber
+            type: string
+
       - file: src/pages/about/index.md
         label: About
         name: about

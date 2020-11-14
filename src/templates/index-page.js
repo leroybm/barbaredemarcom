@@ -184,10 +184,6 @@ export const IndexPageTemplate = ({
       </section>
   
       <BlogRoll />
-  
-      <div className="c-footer-thing">
-  
-      </div>
     </main>
   )
 }
