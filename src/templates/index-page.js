@@ -53,7 +53,7 @@ export const IndexPageTemplate = ({
 
   return (
     <main>
-      <section className="c-what-is-therapy">
+      <section className="c-what-is-therapy" id="what-is-therapy">
         <div className="c-container">
           <h2>{whatIsTherapy.title}</h2>
   
@@ -125,7 +125,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-for-who">
+      <section className="c-for-who" id="for-who">
         <div className="c-container">
           <h2>{forWho.title}</h2>
   
@@ -153,7 +153,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-about-barbara">
+      <section className="c-about-barbara" id="about-barbara">
         <div className="c-container">
           <h2>{aboutBarbara.title}</h2>
   
@@ -170,7 +170,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-contact">
+      <section className="c-contact" id="contact">
         <div className="c-container">
           <h2>{contact.title}</h2>
   
@@ -182,7 +182,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-blog">
+      <section className="c-blog" id="blog">
         <div className="c-container">
           <h2>Blog</h2>
   

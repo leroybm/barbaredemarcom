@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import logo from "../img/logo.svg";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { windowScrollTo } from 'seamless-scroll-polyfill'
 
 const PHRASE_INTERVAL = 10000;
 
@@ -50,6 +51,25 @@ const Navbar = class extends React.Component {
     )
   }
 
+  scroollToSection = (event, sectionId) => {
+    event.preventDefault();
+
+    const element = document.getElementById(sectionId);
+
+    if (!element && !(element && element.offsetTop)) {
+      window.location = event.target.href;
+      return;
+    };
+
+    // Element that we're trying to scroll to
+    console.info('[Navbar.scrollToSection.element]', element);
+
+    windowScrollTo({
+      top: element.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+
   render() {
     const phrases = this.phrases
       .filter(phrase => phrase.id === this.state.activePhrase)
@@ -87,21 +107,21 @@ const Navbar = class extends React.Component {
               aria-hidden={true}
             >
               <div className="c-navbar-start navbar-start has-text-centered">
-                <Link className="c-navbar-item navbar-item" to="/about">
+                <a className="c-navbar-item navbar-item" href="/#what-is-therapy" onClick={(event) => this.scroollToSection(event, 'what-is-therapy')}>
                   O que é
-                </Link>
-                <Link className="c-navbar-item navbar-item" to="/products">
+                </a>
+                <a className="c-navbar-item navbar-item" href="/#for-who" onClick={(event) => this.scroollToSection(event, 'for-who')}>
                   Para quem
-                </Link>
-                <Link className="c-navbar-item navbar-item" to="/blog">
+                </a>
+                <a className="c-navbar-item navbar-item" href="/#about-barbara" onClick={(event) => this.scroollToSection(event, 'about-barbara')}>
                   Quem faz
-                </Link>
-                <Link className="c-navbar-item navbar-item" to="/contact">
+                </a>
+                <a className="c-navbar-item navbar-item" href="/#blog" onClick={(event) => this.scroollToSection(event, 'blog')}>
                   Blog
-                </Link>
-                <Link className="c-navbar-item navbar-item" to="/contact/examples">
+                </a>
+                <a className="c-navbar-item navbar-item" href="/#contact" onClick={(event) => this.scroollToSection(event, 'contact')}>
                   Contato
-                </Link>
+                </a>
               </div>
             </div>
           </div>

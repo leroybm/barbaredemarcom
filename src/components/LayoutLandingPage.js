@@ -4,7 +4,7 @@ import Navbar from '../components/NavbarLandingPage'
 import './all.sass'
 import './custom.sass'
 import useSiteMetadata from './SiteMetadata'
-import SocialNetworks from "./SocialNetworks";
+import SocialNetworks from './SocialNetworks';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
