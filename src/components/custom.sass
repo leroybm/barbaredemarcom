@@ -72,6 +72,36 @@ $mobile-width: 768px
   line-height: 113px
   text-align: center
 
+%hamburger-menu-mobile
+  @include mobile
+    .c-hamburger-menu
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      text-transform: uppercase
+      background: transparent
+      margin: 0
+
+    .c-nav-menu
+      display: block
+      position: fixed
+      width: 100vw
+      height: 100vh
+      top: 0
+      left: -100vw
+      transition: left 250ms
+
+      &.is-active
+        left: 0
+
+    .c-navbar-start
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+
 // General layout classes
 .c-container
   max-width: 1110px
@@ -159,7 +189,7 @@ $mobile-width: 768px
       font-size: 48px
       line-height: 60px
       text-align: center
-      margin-bottom: 130px
+      margin-bottom: 50px
 
       @include mobile
         font-weight: 300
@@ -192,34 +222,51 @@ $mobile-width: 768px
         small
           color: #626465
 
+  @extend %hamburger-menu-mobile
+
+.c-header
+  padding: 40px 70px 40px 40px
+
   @include mobile
-    .c-hamburger-menu
-      font-family: $font-quicksand
-      font-style: normal
-      font-weight: 500
-      font-size: 16px
-      line-height: 24px
-      text-transform: uppercase
-      background: transparent
-      margin: 0
+    padding: 24px 0 0 24px
+    width: 80px
 
-    .c-nav-menu
-      display: block
-      position: fixed
-      width: 100vw
-      height: 100vh
-      top: 0
-      left: -100vw
-      transition: left 250ms
+  .c-navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
 
-      &.is-active
-        left: 0
+  .c-logo
+    width: 100px
+    height: 80px
+    position: fixed
 
-    .c-navbar-start
+    @include mobile
+      display: none
+
+  .c-hamburger-menu
+    cursor: pointer
+
+  .c-nav-menu
+    font-family: $font-quicksand
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 30px
+    text-transform: uppercase
+
+  @include mobile
+    .c-navbar-end
       height: 100%
       display: flex
       flex-direction: column
       justify-content: center
+
+    .c-navbar-item
+      text-align: left
+      padding-left: 64px
+
+  @extend %hamburger-menu-mobile
 
 // Floating bottom left social network icons
 .c-social-networks
