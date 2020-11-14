@@ -21,7 +21,11 @@ $mobile-width: 768px
 
 @mixin mobile 
   @media (max-width: $mobile-width)
-    @content;
+    @content
+
+@mixin desktop 
+  @media (min-width: $mobile-width)
+    @content
 
 // Animations
 .fade-enter
@@ -230,6 +234,8 @@ $mobile-width: 768px
   @include mobile
     padding: 24px 0 0 24px
     width: 80px
+    height: 50px
+    margin-bottom: 105px
 
   .c-navbar
     display: flex
@@ -688,3 +694,39 @@ $mobile-width: 768px
 .c-footer-thing
   height: 150px
   background: $barbara-blue
+
+.c-internal-therapy-type
+  h1, h2
+    font-family: $font-amatic
+    font-style: normal
+    font-weight: bold
+    font-size: 64px
+    line-height: 100%
+    text-align: center
+    text-transform: capitalize
+    margin-bottom: 48px
+
+  h2
+    text-align: left
+    font-size: 48px
+    margin-bottom: 24px
+
+  p
+    font-family: Quicksand
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+    margin-bottom: 48px
+
+    &:last-of-type
+      margin-bottom: 24px
+
+  button
+    @extend %button-round
+    display: flex
+    margin: 0 auto
+
+    img
+      margin-right: 8px
