@@ -2,8 +2,9 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Navbar from '../components/NavbarLandingPage'
 import './all.sass'
+import './custom.sass'
 import useSiteMetadata from './SiteMetadata'
-import SocialNetworks from "./SocialNetworks";
+import SocialNetworks from './SocialNetworks';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -22,6 +23,9 @@ const TemplateWrapper = ({ children }) => {
       <SocialNetworks/>
       <div>{children}</div>
       {/*<Footer />*/}
+      <div className="c-footer-thing">
+        {/* Mock footer */}
+      </div>
     </div>
   )
 }

@@ -11,6 +11,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import BlogRoll from '../components/BlogRoll';
 
 export const IndexPageTemplate = ({
   whatIsTherapy,
@@ -20,24 +21,40 @@ export const IndexPageTemplate = ({
   contact,
 }) => {
   let [currentSlide, setCurrentSlide] = useState(0);
-  let [isMobile, setIsMobile] = useState(false);
+  let [carousselDimensions, setCarousselDimensions] = useState({ height: 411, width: 1110 }); // Desktop sizing
   
   useEffect(() => {
-    const verifyIsMobile = debounce(() => {
-      setIsMobile(!window.matchMedia('max-width: 768px').matches);
+    // Sets carrousel dimensions dinamically as our carrousel lib doesn't do it automatically
+    const findCarousselDimensions = debounce(() => {
+      // Reference element for caroussel sizing (the carrousel slide)
+      const elements = Array.from(document.querySelectorAll('.c-slide'));
+
+      const height = elements
+        .reduce((finalHeight, currentElement) => currentElement.clientHeight >= finalHeight ? currentElement.clientHeight : finalHeight, 0);
+
+      const width = elements[0] && elements[0].clientWidth;
+      
+      // For the love of god, only set it when it's different, otherwise react will go mental and set it every debounce millisecond interval
+      // I don't like this pattern do, but what can we do? 
+      if (carousselDimensions.height !== height || carousselDimensions.width !== width) {
+        setCarousselDimensions({ height, width });
+      }
     }, 100);
 
-    verifyIsMobile();
+    // Leaving this here for it to be clear as hell if it's firing more than it should
+    console.info('[IndexPageTemplate.carousselDimensions]', carousselDimensions, '\nIf this is spamming the console we have a problem');
 
-    window.addEventListener('resize', verifyIsMobile);
+    findCarousselDimensions();
+
+    window.addEventListener('resize', findCarousselDimensions);
     return () => {
-       window.removeEventListener('resize', verifyIsMobile);
+       window.removeEventListener('resize', findCarousselDimensions);
     }
-  }, []);
+  }, [carousselDimensions, setCarousselDimensions]);
 
   return (
     <main>
-      <section className="c-what-is-therapy">
+      <section className="c-what-is-therapy" id="what-is-therapy">
         <div className="c-container">
           <h2>{whatIsTherapy.title}</h2>
   
@@ -48,11 +65,11 @@ export const IndexPageTemplate = ({
       <section className="c-types-of-therapy">
         <div className="c-container">
           <CarouselProvider
-            naturalSlideWidth={isMobile ? 327 : 1110}
-            naturalSlideHeight={isMobile ? 1150 : 411}
+            naturalSlideWidth={carousselDimensions.width}
+            naturalSlideHeight={carousselDimensions.height}
             totalSlides={3}
           >
-            <div class="c-slides">
+            <div className="c-slides">
               <Slider>
                 <Slide index={0}>
                   <div className="c-slide">
@@ -109,7 +126,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-for-who">
+      <section className="c-for-who" id="for-who">
         <div className="c-container">
           <h2>{forWho.title}</h2>
   
@@ -137,7 +154,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-about-barbara">
+      <section className="c-about-barbara" id="about-barbara">
         <div className="c-container">
           <h2>{aboutBarbara.title}</h2>
   
@@ -154,7 +171,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-contact">
+      <section className="c-contact" id="contact">
         <div className="c-container">
           <h2>{contact.title}</h2>
   
@@ -166,40 +183,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <section className="c-blog">
-        <div className="c-container">
-          <h2>Blog</h2>
-  
-          <div className="c-post-list">
-            <div className="c-post">
-              <img src="https://placehold.it/300x300" alt=""/>
-              <strong>Lorem Ispum</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#a">Continue lendo</a>
-            </div>
-  
-            <div className="c-post">
-              <img src="https://placehold.it/300x300" alt=""/>
-              <strong>Lorem Ispum</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#a">Continue lendo</a>
-            </div>
-  
-            <div className="c-post">
-              <img src="https://placehold.it/300x300" alt=""/>
-              <strong>Lorem Ispum</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#a">Continue lendo</a>
-            </div>
-          </div>
-  
-          <a href="#a">Mais publicações</a>
-        </div>
-      </section>
-  
-      <div className="c-footer-thing">
-  
-      </div>
+      <BlogRoll />
     </main>
   )
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import logo from "../img/logo.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -13,14 +12,9 @@ const Navbar = class extends React.Component {
   }
 
   toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
+    this.setState({
         active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
+      }, () => {
         this.state.active
           ? this.setState({
               navBarActiveClass: 'is-active',
@@ -34,66 +28,53 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
+      <div className="c-header">
+        <nav
+          className="c-navbar navbar is-transparent"
+          role="navigation"
+          aria-label="main-navigation"
+        >
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <Link to="/" className="c-logo" title="Logo">
+              <img src={logo} alt="Bárbara Demarco" />
             </Link>
             {/* Hamburger menu */}
             <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              className={`c-hamburger-menu navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               role="button"
               aria-hidden={true}
               onClick={() => this.toggleHamburger()}
-              onKeyDown={() => {}}
             >
-              <span />
-              <span />
-              <span />
+              Menu
             </div>
           </div>
           <div
             id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`c-nav-menu navbar-menu ${this.state.navBarActiveClass}`}
+            onClick={() => this.toggleHamburger()}
+            aria-hidden={true}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+            <div className="c-navbar-end navbar-end has-text-centered">
+              <Link className="c-navbar-item navbar-item" to="/about">
+                O que é
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="c-navbar-item navbar-item" to="/products">
+                Para quem
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className="c-navbar-item navbar-item" to="/blog">
+                Quem faz
+              </Link>
+              <Link className="c-navbar-item navbar-item" to="/contact">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
+              <Link className="c-navbar-item navbar-item" to="/contact/examples">
+                Contato
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     )
   }
 }

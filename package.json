@@ -31,8 +31,10 @@
     "prop-types": "^15.6.0",
     "pure-react-carousel": "^1.27.6",
     "react": "^16.8.4",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
+    "seamless-scroll-polyfill": "^1.2.3",
     "uuid": "^7.0.0"
   },
   "keywords": [

@@ -14,11 +14,33 @@ button
   &:focus
     outline: none
 
+body
+  font-family: $font-quicksand
+
 $mobile-width: 768px
 
 @mixin mobile 
   @media (max-width: $mobile-width)
-    @content;
+    @content
+
+@mixin desktop 
+  @media (min-width: $mobile-width)
+    @content
+
+// Animations
+.fade-enter
+  transition: opacity 500ms
+  opacity: 0
+
+  &-active
+    opacity: 1
+
+.fade-leave
+  transition: opacity 500ms
+  opacity: 1
+
+  &-active
+    opacity: 0
 
 // CSS Snippets
 %flex-center-center
@@ -53,6 +75,36 @@ $mobile-width: 768px
   font-size: 90px
   line-height: 113px
   text-align: center
+
+%hamburger-menu-mobile
+  @include mobile
+    .c-hamburger-menu
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      text-transform: uppercase
+      background: transparent
+      margin: 0
+
+    .c-nav-menu
+      display: block
+      position: fixed
+      width: 100vw
+      height: 100vh
+      top: 0
+      left: -100vw
+      transition: left 250ms
+
+      &.is-active
+        left: 0
+
+    .c-navbar-start
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
 
 // General layout classes
 .c-container
@@ -110,51 +162,117 @@ $mobile-width: 768px
     &:first-of-type
       padding-left: 0
 
-  .c-logo
-    display: block
-    margin-top: 130px
-    margin-left: 488px
-
-    img
-      width: 200px
+  &__main
+    padding-top: 158px
+    width: 100%
+    max-width: 1220px
+    display: flex
+    flex-direction: column
+    align-items: center
 
     @include mobile
-      display: flex
-      justify-content: center
-      align-items: center
-      margin: 116px 0 0
+      padding-top: 116px
+
+    .c-logo
+      display: block
+      margin-bottom: 75px
 
       img
-        width: 150px
+        width: 240px
+
+      @include mobile
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 48px
+
+        img
+          width: 150px
+
+    h3
+      font-size: 48px
+      line-height: 60px
+      text-align: center
+      margin-bottom: 50px
+
+      @include mobile
+        font-weight: 300
+        font-size: 48px
+        line-height: 60px
+        margin-bottom: 40px
+
+    .c-phrases
+      span
+        position: relative
+        width: 570px
+        display: block
+
+        @include mobile
+          width: 335px
+
+      p
+        position: absolute
+        top: 0
+        font-size: 38px
+        line-height: 47px
+        text-align: center
+        max-width: 570px
+
+        @include mobile
+          font-size: 22px
+          line-height: 27px
+          text-align: left
+
+        small
+          color: #626465
+
+  @extend %hamburger-menu-mobile
+
+.c-header
+  padding: 40px 70px 40px 40px
 
   @include mobile
-    .c-hamburger-menu
-      font-family: $font-quicksand
-      font-style: normal
-      font-weight: 500
-      font-size: 16px
-      line-height: 24px
-      text-transform: uppercase
-      background: transparent
-      margin: 0
+    padding: 24px 0 0 24px
+    width: 80px
+    height: 50px
+    margin-bottom: 105px
 
-    .c-nav-menu
-      display: block
-      position: fixed
-      width: 100vw
-      height: 100vh
-      top: 0
-      left: -100vw
-      transition: left 250ms
+  .c-navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
 
-      &.is-active
-        left: 0
+  .c-logo
+    width: 100px
+    height: 80px
+    position: fixed
 
-    .c-navbar-start
+    @include mobile
+      display: none
+
+  .c-hamburger-menu
+    cursor: pointer
+
+  .c-nav-menu
+    font-family: $font-quicksand
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 30px
+    text-transform: uppercase
+
+  @include mobile
+    .c-navbar-end
       height: 100%
       display: flex
       flex-direction: column
       justify-content: center
+
+    .c-navbar-item
+      text-align: left
+      padding-left: 64px
+
+  @extend %hamburger-menu-mobile
 
 // Floating bottom left social network icons
 .c-social-networks
@@ -576,3 +694,43 @@ $mobile-width: 768px
 .c-footer-thing
   height: 150px
   background: $barbara-blue
+
+.c-internal-therapy-type
+  h1, h2
+    font-family: $font-amatic
+    font-style: normal
+    font-weight: bold
+    font-size: 64px
+    line-height: 100%
+    text-align: center
+    text-transform: capitalize
+    margin-bottom: 48px
+
+  h2
+    text-align: left
+    font-size: 48px
+    margin-bottom: 24px
+
+  p
+    font-family: $font-quicksand
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+    margin-bottom: 48px
+
+    & > img
+      display: block
+      margin: 16px auto 
+
+    &:last-of-type
+      margin-bottom: 24px
+
+  button
+    @extend %button-round
+    display: flex
+    margin: 0 auto
+
+    img
+      margin-right: 8px
