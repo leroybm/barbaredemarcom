@@ -1,19 +1,18 @@
 ---
 templateKey: 'terapia-individual'
 path: /terapia-individual
-title: About our values 
+title: Terapia <br/>Individual
+firstText: >
+    São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!<br/><br/>
+    Estar em Terapia é abrir um tempo de qualidade nas agendas atribuladas e na  correria da vida atual para acessar  o nosso mundo interno e organizar as partes do quebra cabeça, entender as dores, criar possibilidades,  para explorar e compreender pensamentos e sentimentos.<br/><br/>
+image: /img/c-internal-individual-therapy.jpg
+italicText: >
+    Acredito que estar em um processo terapêutico deve ser algo tão acessível e normalizado quanto ir a academia, ao dentista e ao médico, devemos ter a oportunidade de nos relacionarmos com nós mesmos e buscar a mudança que  desejamos. O processo de transformação nem sempre é fácil,  pode causar medo, vergonha ou esbarrar no nosso  controle, o que paraliza e nos impede de agir.  A  terapia traz um ambiente seguro, onde através do diálogo se ambrem caminhos e é possivel explorar quem se é e quem se deseja ser.
+secondTitle: Como Funciona?
+secondText: >
+    <strong>Você pode marcar a sua conversa inicial sem compromisso, e aí a terapia começa.</strong><br/><br/>
+    Toda semana, teremos um encontro presencial ou online. As sessões de terapia online são oferecidas para todo o Brasil e para Brasileiros que morem fora do país.<br/><br/>
+    Cada sessão tem duração de  60 min e nela vamos conversar e construir juntos o seu processo.<br/><br/>
+    Para saber mais é só clicar botão abaixo que podemos conversar nos conhecer e  sobre suas  dúvidas.
+whatsappNumber: 554899532660
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
-
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
-
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
