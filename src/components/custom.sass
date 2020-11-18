@@ -775,3 +775,46 @@ $mobile-width: 768px
     &:last-of-type
       margin-bottom: 24px
 
+.c-about-roll
+  h2
+    font-family: $font-amatic
+    font-weight: bold
+    font-size: 64px
+    line-height: 81px
+    text-align: center
+    margin-bottom: 46px
+
+  img
+    display: block
+    margin: 0 auto
+
+  strong
+    display: block
+    font-family: $font-quicksand
+    font-weight: 500
+    font-size: 20px
+    line-height: 25px
+    text-align: center
+    margin: 24px 0 16px
+
+  p
+    display: block
+    margin: 0 40px
+    font-family: $font-quicksand
+    font-size: 16px
+    line-height: 20px
+    font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+    margin-bottom: 24px
+
+  button
+    @extend %button-round
+    margin: 0 auto
+    display: block
+
+    @include desktop
+      display: none
+
+  @include mobile
+    .c-should-limit article:nth-of-type(n+3)
+      display: none
+      
