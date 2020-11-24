@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from "../img/logo.svg";
+import logo from '../img/logo.svg';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { windowScrollTo } from 'seamless-scroll-polyfill'
 
