@@ -279,6 +279,13 @@ $mobile-width: 768px
   position: fixed
   left: $body-padding
   bottom: 64px
+  transition: ease-in-out opacity 100ms
+
+  @include desktop
+    &.hidden
+      opacity: 0
+      pointer-events: none
+      cursor: none    
 
   @include mobile
     display: flex
