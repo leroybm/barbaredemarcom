@@ -1,0 +1,131 @@
+// Vars
+$barbara-blue: linear-gradient(180deg, #2888AD 0%, #0378A6 100%)
+
+$font-amatic: 'Amatic SC', cursive
+$font-quicksand: 'Quicksand', sans-serif
+
+$body-padding: 72px
+$body-padding-mobile: 24px
+
+// Overwriting defaults
+button
+  cursor: pointer
+
+  &:focus
+    outline: none
+
+body
+  font-family: $font-quicksand
+
+$mobile-width: 768px
+
+@mixin mobile 
+  @media (max-width: $mobile-width)
+    @content
+
+@mixin desktop 
+  @media (min-width: $mobile-width)
+    @content
+
+// Animations
+.fade-enter
+  transition: opacity 500ms
+  opacity: 0
+
+  &-active
+    opacity: 1
+
+.fade-leave
+  transition: opacity 500ms
+  opacity: 1
+
+  &-active
+    opacity: 0
+
+// CSS Snippets
+%flex-center-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+%button-round
+  font-family: $font-quicksand
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 20px
+  background: #FFFFFF
+  box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.14)
+  border-radius: 50px
+  padding: 16px 24px
+  text-transform: uppercase
+  border: none
+  color: #363636
+  transition: transform 100ms, box-shadow 100ms
+
+  &:hover
+    transform: scale(1.01)
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.2)
+    transform-origin: center
+
+%page-title
+  font-family: $font-amatic
+  font-style: normal
+  font-weight: normal
+  font-size: 90px
+  line-height: 113px
+  text-align: center
+
+%hamburger-menu-mobile
+  @include mobile
+    .c-hamburger-menu
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      text-transform: uppercase
+      background: transparent
+      margin: 0
+
+    .c-nav-menu
+      display: block
+      position: fixed
+      width: 100vw
+      height: 100vh
+      top: 0
+      left: -100vw
+      transition: left 250ms
+
+      &.is-active
+        left: 0
+
+    .c-navbar-start
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+// General layout classes
+.c-container
+  max-width: 1110px
+  margin: 0 auto
+
+  @include mobile
+    width: 100%
+    padding: 0 $body-padding-mobile
+    
+// Components / Sections
+@import './header-landing-page'
+@import './header'
+@import './social-networks'
+@import './what-is-therapy'
+@import './types-of-therapy'
+@import './for-who'
+@import './about-barbara'
+@import './contact'
+@import './internal-therapy-type'
+@import './internal-about'
+@import './about-roll'
+@import './footer.sass'
+@import './blog'

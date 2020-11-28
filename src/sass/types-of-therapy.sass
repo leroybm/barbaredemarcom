@@ -1,0 +1,72 @@
+.c-types-of-therapy
+  padding: 180px 0 78px
+  background: url('../img/bg_horizontal_line 2.svg') no-repeat bottom
+
+  @include mobile
+    padding: 56px 0 39px
+
+  .c-slides-nav
+    margin-top: 177px
+
+    @include mobile
+      margin-top: 2 * $body-padding-mobile
+
+    nav
+      display: flex
+      justify-content: center
+      align-items: center
+
+      button
+        background: none
+        border: none
+        font-size: 35px
+        padding: 0
+        margin-right: 24px
+        color: #9E9E9E
+        cursor: pointer
+
+        @include mobile
+          font-size: $body-padding-mobile
+
+  .c-slide
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+    @include mobile
+      flex-direction: column
+
+  .c-slide-image
+    min-width: 405px
+    margin-right: 75px
+
+    @include mobile
+      min-width: calc(100vw - (2 * #{$body-padding-mobile}))
+      margin-bottom: $body-padding-mobile
+      margin-right: 0
+
+  .c-slide-body
+    h3
+      font-family: $font-amatic
+      font-size: 70px
+      line-height: 88px
+      text-align: justify
+
+      @include mobile
+        font-size: 48px
+        line-height: 48px
+        text-align: center
+        margin-bottom: 16px
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      white-space: pre-wrap
+
+      @include mobile
+        font-size: 16px
+        line-height: 20px
+        text-align: center

@@ -1,0 +1,40 @@
+.c-social-networks
+  position: fixed
+  left: $body-padding
+  bottom: 64px
+  transition: ease-in-out opacity 100ms
+
+  @include desktop
+    &.hidden
+      opacity: 0
+      pointer-events: none
+      cursor: none    
+
+  @include mobile
+    display: flex
+    position: absolute
+    left: auto
+    bottom: auto
+    top: $body-padding-mobile
+    right: $body-padding-mobile
+
+  a
+    color: #88A4AE
+    font-size: 40px
+    height: 35px
+    display: block
+
+    @include mobile
+      font-size: 24px
+      height: 24px
+      color: rgba(0, 0, 0, 0.6)
+
+    &:not(:last-of-type)
+      margin-bottom: 22px
+
+      @include mobile
+        margin-bottom: 0
+        margin-right: 22px
+
+  svg
+    display: block

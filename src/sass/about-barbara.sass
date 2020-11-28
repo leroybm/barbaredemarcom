@@ -1,0 +1,50 @@
+.c-about-barbara
+  margin-bottom: 180px
+
+  @include mobile
+    margin-bottom: 57px
+
+    .c-container
+      padding: 0
+
+  h2
+    @extend %page-title
+    margin-bottom: 105px
+
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+      margin-bottom: 24px
+
+  .c-columns
+    display: flex
+
+    @include mobile
+      flex-direction: column-reverse
+
+  .c-about
+    margin-right: 35px
+    max-width: 555px
+    display: flex
+    flex-direction: column
+    flex: 1 1
+    align-items: center
+
+    @include mobile
+      margin: 16px 24px 0
+
+    p
+      text-align: center
+      padding: 40px 0
+
+      @include mobile
+        padding: 0
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+        margin-bottom: 16px
+
+    a
+      @extend %button-round
+      padding: 16px 40px

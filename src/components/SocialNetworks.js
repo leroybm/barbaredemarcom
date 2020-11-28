@@ -27,7 +27,7 @@ const SocialNetworks = class extends React.Component {
 
   componentWillUnmount() {
     if (this.throttledScrollHandle) {
-      window.removeEventListener(this.throttledScrollHandle);
+      window.removeEventListener('scroll', this.throttledScrollHandle);
     }
   }
 
