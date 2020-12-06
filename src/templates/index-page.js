@@ -59,6 +59,12 @@ export const IndexPageTemplate = ({
           <h2>{whatIsTherapy.title}</h2>
   
           <p>{whatIsTherapy.body}</p>
+          <p>
+            {/* TODO: Add this to CMS */}
+            Percebo o processo terapêutico como um processo de co-autoria, onde nesta via de mão dupla o terapeuta e cliente caminham lado a lado, ele acontece através da conexão e abertura para o desconhecido e o já conhecido, para mim estar em terapia é fazer parte de um relacionamento: honesto, humilde e mutuamente transformador.
+            <br/><br/>
+            A terapia é uma experiência existencial do autoentendimento.
+          </p>
         </div>
       </section>
   

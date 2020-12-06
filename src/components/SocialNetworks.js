@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagramSquare, faWhatsappSquare, faMedium } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faWhatsapp, faMediumM } from '@fortawesome/free-brands-svg-icons'
 import { throttle } from 'lodash';
 
 const FOOTER_HEIGHT = 416;
@@ -35,15 +35,15 @@ const SocialNetworks = class extends React.Component {
     return (
       <div className={`c-social-networks ${this.state.hidden ? 'hidden' : ''}`}>
         <Link to="https://instagram.com" target="_blank">
-          <FontAwesomeIcon icon={faInstagramSquare}/>
+          <FontAwesomeIcon icon={faInstagram}/>
         </Link>
 
         <Link to="https://whatsapp.com" target="_blank">
-          <FontAwesomeIcon icon={faWhatsappSquare}/>
+          <FontAwesomeIcon icon={faWhatsapp}/>
         </Link>
 
         <Link to="https://medium.com" target="_blank">
-          <FontAwesomeIcon icon={faMedium}/>
+          <FontAwesomeIcon icon={faMediumM}/>
         </Link>
       </div>
     )
