@@ -1,6 +1,6 @@
 ---
 templateKey: terapia-individual
-title: Terapia <br/>Individual
+title: Terapia Individual
 firstText: >
   São tantos os desafios da vida moderna, são tantas as ocupações e
   necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as

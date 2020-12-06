@@ -18,9 +18,11 @@ export const TerapiaDeCasalTemplate = ({ data }) => {
         <p>
           <span dangerouslySetInnerHTML={{ __html: firstText }} />
 
-          <img src={get(image, 'childImageSharp.fluid.src', '')} alt={`Imagem para página ${title}`}/>
+          <div>
+            <img src={get(image, 'childImageSharp.fluid.src', '')} alt={`Imagem para página ${title}`}/>
 
-          <i dangerouslySetInnerHTML={{ __html: italicText }} /> 
+            <i dangerouslySetInnerHTML={{ __html: italicText }} /> 
+          </div>
         </p>
 
         <h2>
@@ -31,7 +33,7 @@ export const TerapiaDeCasalTemplate = ({ data }) => {
 
         <button onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}><img src={cContactWhats} alt="Icone do whatsapp" />Vamos Conversar</button>
       </div>
-      <BlogRoll />
+      <BlogRoll internal={true} />
     </main>
   )
 }

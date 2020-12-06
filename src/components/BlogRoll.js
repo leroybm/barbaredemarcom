@@ -5,11 +5,13 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, internal } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
+    console.log('[BlogRoll]', this.props)
+
     return (
-      <section className="c-blog" id="blog">
+      <section className={`c-blog ${internal ? 'is-internal' : ''}`} id="blog">
         <div className="c-container">
           <h2>Blog</h2>
   
@@ -46,9 +48,10 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
+  internal: PropTypes.bool
 }
 
-export default () => (
+export default ({ internal }) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -81,6 +84,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRoll data={data} count={count} internal={internal} />}
   />
 )

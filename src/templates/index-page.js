@@ -189,7 +189,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
   
-      <BlogRoll />
+      <BlogRoll internal={false} />
     </main>
   )
 }
