@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import logo from '../img/logo.svg'
 import poweredBy from '../img/powered-by.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagramSquare, faWhatsappSquare, faMedium } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faWhatsapp, faMediumM } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = class extends React.Component {
   render() {
@@ -33,15 +33,15 @@ const Footer = class extends React.Component {
           <div className="c-footer__info">
             <div className="c-footer__info__social">
               <Link to="https://instagram.com" target="_blank">
-                <FontAwesomeIcon icon={faInstagramSquare}/>
+                <FontAwesomeIcon icon={faInstagram}/>
               </Link>
 
               <Link to="https://whatsapp.com" target="_blank">
-                <FontAwesomeIcon icon={faWhatsappSquare}/>
+                <FontAwesomeIcon icon={faWhatsapp}/>
               </Link>
 
               <Link to="https://medium.com" target="_blank">
-                <FontAwesomeIcon icon={faMedium}/>
+                <FontAwesomeIcon icon={faMediumM}/>
               </Link>
             </div>
 
