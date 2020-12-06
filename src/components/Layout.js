@@ -1,10 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Navbar from '../components/Navbar'
-import './all.sass'
-import './custom.sass'
+import '../sass/all.sass'
+import '../sass/custom.sass'
 import useSiteMetadata from './SiteMetadata'
-import SocialNetworks from "./SocialNetworks";
+import SocialNetworks from './SocialNetworks';
+import Footer from './Footer'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -22,10 +23,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <SocialNetworks/>
       <div>{children}</div>
-      {/*<Footer />*/}
-      <div className="c-footer-thing">
-        {/* Mock footer */}
-      </div>
+      <Footer />
     </div>
   )
 }

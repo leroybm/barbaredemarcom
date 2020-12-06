@@ -1,0 +1,45 @@
+.c-header
+  padding: 40px 70px 40px 40px
+
+  @include mobile
+    padding: 24px 0 0 24px
+    width: 80px
+    height: 50px
+    margin-bottom: 105px
+
+  .c-navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .c-logo
+    width: 100px
+    height: 80px
+    position: fixed
+
+    @include mobile
+      display: none
+
+  .c-hamburger-menu
+    cursor: pointer
+
+  .c-nav-menu
+    font-family: $font-quicksand
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 30px
+    text-transform: uppercase
+
+  @include mobile
+    .c-navbar-end
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+    .c-navbar-item
+      text-align: left
+      padding-left: 64px
+
+  @extend %hamburger-menu-mobile

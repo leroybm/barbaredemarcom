@@ -1,0 +1,72 @@
+// Landing Page - "Para quem"
+.c-for-who
+  padding-top: 180px
+
+  @include mobile
+    padding-top: 48px
+
+  .c-container
+    max-width: 1010px
+
+  h2
+    @extend %page-title
+
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+
+  .c-for-who__types
+    padding-top: 104px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 180px
+
+    @include mobile
+      padding-top: 32px
+      flex-direction: column
+      margin-bottom: 0
+
+  .c-for-who__type
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex: 1 1 0
+    max-width: 445px
+
+    @include mobile
+      margin-bottom: 57px
+
+    img
+      margin-bottom: 24px
+
+    h3
+      font-family: $font-amatic
+      font-style: normal
+      font-weight: normal
+      font-size: 60px
+      line-height: 76px
+
+      @include mobile
+        font-size: 48px
+        line-height: 48px
+        text-align: center
+        margin-bottom: 16px
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 22px
+      text-align: center
+      margin-bottom: 24px
+      
+      @include mobile
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+
+    a
+      @extend %button-round

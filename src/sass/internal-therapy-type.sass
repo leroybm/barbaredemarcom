@@ -1,0 +1,82 @@
+.c-internal-therapy-type
+  @include desktop
+    & > .c-container
+      max-width: 900px !important 
+      padding-bottom: 105px
+
+  h1, h2
+    font-family: $font-amatic
+    font-style: normal
+    font-weight: bold
+    font-size: 64px
+    line-height: 100%
+    text-align: center
+    text-transform: capitalize
+    margin-bottom: 48px
+
+    @include desktop
+      font-size: 90px
+      line-height: 113px
+      color: rgba(0, 0, 0, 0.87)
+
+  h2
+    text-align: left
+    font-size: 48px
+    margin-bottom: 24px
+
+    @include desktop
+      font-weight: normal
+      font-size: 70px
+      line-height: 88px
+      text-align: center
+
+  p
+    font-family: $font-quicksand
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+    margin-bottom: 48px
+
+    @include desktop
+      font-size: 18px
+      line-height: 150%
+
+    & > img
+      display: block
+      margin: 16px auto 
+
+    & > div
+      @include desktop
+        display: flex
+        flex-direction: row-reverse
+
+        img
+          min-width: 450px
+
+        i
+          padding-left: 40px
+          padding-right: 30px
+          font-size: 18px
+          line-height: 150%
+          display: flex
+          align-items: center
+          font-feature-settings: 'ordn' on, 'liga' off, 'kern' off
+
+    &:last-of-type
+      margin-bottom: 24px
+
+      @include desktop
+        font-weight: 500
+        font-size: 18px
+        line-height: 22px
+        text-align: center 
+
+  button
+    @extend %button-round
+    display: flex
+    margin: 0 auto
+
+    img
+      margin-right: 8px

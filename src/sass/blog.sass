@@ -1,0 +1,102 @@
+// Landing Page - "Blog"
+.c-blog
+  padding: 179px 0 140px
+
+  &.is-internal
+    @include desktop
+      background: $barbara-blue
+
+      h2, .c-post strong, .c-post p, .c-post a
+        color: #fff !important
+
+
+  @include mobile
+    padding: 56px 0
+
+  h2
+    font-family: $font-amatic
+    font-style: normal
+    font-weight: normal
+    font-size: 90px
+    line-height: 113px
+    text-align: center
+    margin-bottom: 105px
+
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+      margin-bottom: 16px
+
+  .c-container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & > a
+      @extend %button-round
+      color: #000
+
+  .c-post-list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 105px
+    margin-bottom: 64px
+
+    @include mobile
+      grid-template-columns: 1fr
+      margin-bottom: 0
+
+  .c-post
+    @include mobile
+      &:not(:first-of-type)
+        display: none
+
+    img
+      margin-bottom: 16px
+
+      @include mobile
+        margin-bottom: 24px
+
+    strong
+      font-family: $font-amatic
+      font-style: normal
+      font-weight: normal
+      font-size: 40px
+      line-height: 50px
+      text-align: center
+      display: block
+      margin-bottom: 8px
+      margin-top: 16px
+
+      @include mobile
+        font-size: 48px
+        line-height: 48px
+        margin-bottom: 16px
+        margin-top: 0
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 20px
+      text-align: justify
+      margin-bottom: 8px
+
+      @include mobile
+        margin-bottom: 32px
+
+    a
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 18px
+      line-height: 22px
+      display: block
+      letter-spacing: -0.04em
+      text-transform: uppercase
+      text-align: center
+      color: #000
+
+      @include mobile
+        display: none

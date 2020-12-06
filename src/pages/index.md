@@ -78,7 +78,7 @@ aboutBarbara:
 
 
     Sua prática terapêutica é norteada pelo Construcionismo Social e pelas práticas pós modernas da Terapia Narrativa e da Terapia Colaborativa e Dialógica. Ela incorpora sua própria crença na aprendizagem como um processo de vida, incentivando e desafiando as pessoas a serem curiosas, criativas e autênticas e protagonistas do seu processo.
-  url: /sobre-barbara
+  url: /sobre
   buttonLabel: Mais sobre mim
   imgAlt: None
   image: /img/c-about-barbara.jpg

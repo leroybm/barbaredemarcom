@@ -1,0 +1,110 @@
+.c-header-landing-page
+  background: url('../img/c-header-landing-page.jpg') no-repeat fixed center
+  background-size: cover
+  padding-top: 90px
+  height: 100vh
+
+  @include mobile
+    padding-top: $body-padding-mobile
+
+  .c-container
+    max-width: none !important
+    padding: 0 $body-padding 0
+
+    @include mobile
+      padding: 0 $body-padding-mobile 0
+
+  .c-navbar
+    background: transparent
+
+    @include mobile
+      height: 24px
+      min-height: 0
+
+  .c-navbar-item
+    font-size: 24px
+    line-height: 28px
+    color: rgba(0, 0, 0, 0.7)
+    text-transform: uppercase
+    font-family: $font-quicksand
+    padding: 0 16px
+
+    @include mobile
+      text-align: left
+      padding-left: 64px
+      margin-bottom: 32px
+
+      &:first-of-type
+        padding-left: 64px !important
+
+      &:last-of-type
+        margin-bottom: 0
+
+    &:first-of-type
+      padding-left: 0
+
+  &__main
+    padding-top: 12.5vh
+    width: 100%
+    max-width: 1220px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @include mobile
+      padding-top: 116px
+
+    .c-logo
+      display: block
+      margin-bottom: 75px
+
+      img
+        width: 240px
+
+      @include mobile
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 48px
+
+        img
+          width: 150px
+
+    h3
+      font-size: 48px
+      line-height: 60px
+      text-align: center
+      margin-bottom: 50px
+
+      @include mobile
+        font-weight: 300
+        font-size: 48px
+        line-height: 60px
+        margin-bottom: 40px
+
+    .c-phrases
+      span
+        position: relative
+        width: 620px
+        display: block
+
+        @include mobile
+          width: 335px
+
+      p
+        position: absolute
+        top: 0
+        font-size: 3vh
+        line-height: 1.3
+        text-align: center
+        max-width: 620px
+
+        @include mobile
+          font-size: 22px
+          line-height: 27px
+          text-align: left
+
+        small
+          color: #626465
+
+  @extend %hamburger-menu-mobile

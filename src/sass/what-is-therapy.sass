@@ -1,0 +1,37 @@
+.c-what-is-therapy
+  background: $barbara-blue
+  color: #fff
+  padding: 85px 0
+
+  @include mobile
+    padding: 48px 0 56px
+
+  .c-container
+    @extend %flex-center-center
+    flex-direction: column
+
+  h2
+    @extend %page-title
+    margin-bottom: 40px
+
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+      margin-bottom: $body-padding-mobile
+
+  p
+    font-family: $font-quicksand
+    font-size: 19px
+    line-height: 24px
+    text-align: center
+
+    &:last-of-type
+      font-style: italic
+      opacity: 0.8
+      font-size: 19px
+      line-height: 23px
+      margin-top: 16px
+
+    @include mobile
+      font-size: 16px
+      line-height: 20px

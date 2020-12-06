@@ -1,0 +1,56 @@
+.c-contact
+  background: $barbara-blue
+  color: #fff
+  padding: 48px 0 59px
+
+  h2
+    @extend %page-title
+    font-size: 120px
+    line-height: 151px
+
+    @include mobile
+      font-size: 64px
+      line-height: 81px
+
+  .c-container
+    width: 976px
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+
+    @include mobile
+      width: auto
+      flex-direction: column
+
+  .c-whatsapp
+    padding-top: 20px
+
+    @include mobile
+      padding-top: 16px
+
+    p
+      font-family: $font-quicksand
+      font-style: normal
+      font-weight: 500
+      font-size: 22px
+      line-height: 27px
+      display: flex
+      align-items: center
+      margin-bottom: 23px
+      width: 555px
+
+      @include mobile
+        font-size: 18px
+        line-height: 22px
+        width: auto
+        text-align: center
+
+    button
+      @extend %button-round
+      display: flex
+
+      @include mobile
+        margin: 0 auto
+
+      img
+        margin-right: 8px
