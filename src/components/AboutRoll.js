@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Masonry from 'react-masonry-css'
 
 class AboutRoll extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      shouldLimit: true
+      shouldLimit: false
     };
   }
 
@@ -21,8 +22,12 @@ class AboutRoll extends React.Component {
           <h2>Minha História</h2>
   
           <div className={`c-about-roll__list ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
-            {posts &&
-              posts.map(({ node: post }) => (
+            <Masonry
+              breakpointCols={2}
+              className="c-about-roll__masonry-grid"
+              columnClassName="c-about-roll__masonry-collumn"
+            >
+              {posts && posts.map(({ node: post }) => (
                 <article className="c-about-roll__photo"  key={post.id}>
                   <header>
                     <PreviewCompatibleImage
@@ -30,13 +35,16 @@ class AboutRoll extends React.Component {
                         image: post.frontmatter.featuredimage,
                         alt: `Imagem da foto ${post.frontmatter.title}`, 
                       }} 
-                    />{/* TODO: Proper alt */}
-                    <strong>{post.frontmatter.title}</strong>
+                    />
                   </header>
-                  <p>{post.excerpt}</p>
+                  <div class="c-overlay">
+                    <strong>{post.frontmatter.title}</strong>
+                    <p>{post.excerpt}</p>
+                  </div>
                 </article>
               ))
             }
+            </Masonry>
           </div>
   
           {(this.state.shouldLimit && <button onClick={() => this.setState({ shouldLimit: false })}>Carregar Mais</button>)}
