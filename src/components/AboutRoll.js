@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Masonry from 'react-masonry-css'
+import { get } from 'lodash'
 
 class AboutRoll extends React.Component {
   constructor(props) {
@@ -23,11 +24,14 @@ class AboutRoll extends React.Component {
   
           <div className={`c-about-roll__list ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
             <Masonry
-              breakpointCols={2}
+              breakpointCols={{
+                default: 2,
+                768: 1
+              }}
               className="c-about-roll__masonry-grid"
               columnClassName="c-about-roll__masonry-collumn"
             >
-              {posts && posts.map(({ node: post }) => (
+              {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
                 <article className="c-about-roll__photo"  key={post.id}>
                   <header>
                     <PreviewCompatibleImage

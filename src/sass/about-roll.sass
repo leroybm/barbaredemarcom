@@ -60,19 +60,20 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))
-        opacity: 0
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        opacity: 1
         transition: 250ms opacity
+        cursor: default
 
         &:hover
-          opacity: 1
+          opacity: 0
 
 
         strong
           font-family: $font-quicksand
           font-size: 32px
           line-height: 40px
-          color: #000
+          color: #fff
 
         p
           font-family: $font-quicksand
@@ -80,7 +81,7 @@
           font-weight: 500
           font-size: 20px
           line-height: 25px
-          color: #000
+          color: #fff
           max-width: 366px
 
   // Lib styles
@@ -89,6 +90,7 @@
     display: -ms-flexbox 
     display: flex
     margin-left: -18px
+    margin-bottom: 180px - 18px
     width: auto
 
   &__masonry-collumn 
@@ -96,5 +98,4 @@
     background-clip: padding-box
   
   &__masonry-collumn  > article  
-    background: grey
     margin-bottom: 18px
