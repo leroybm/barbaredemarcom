@@ -1,10 +1,13 @@
 ---
 templateKey: about-post
-title: About Post Works!
+title: "2015"
 date: 2016-12-17T15:04:10.000Z
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+  molestias inventore rem ducimus dolor facere quia ad labore, omnis sequi,
+  illum nam explicabo a maxime! Consequuntur neque doloribus repudiandae.
+  Explicabo!
 featuredpost: false
-featuredimage: /img/300x300.png
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+featuredimage: /img/h02-1-1-.jpg
 tags:
   - flavor
   - tasting
