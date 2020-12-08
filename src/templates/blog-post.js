@@ -17,9 +17,9 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section c-blog-post">
       {helmet || ''}
-      <div className="container content">
+      <div className="c-container container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">

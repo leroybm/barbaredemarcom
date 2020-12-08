@@ -1,4 +1,8 @@
 .c-about-roll
+  .c-container
+    @include desktop
+      max-width: 1300px
+
   h2
     font-family: $font-amatic
     font-weight: bold
@@ -41,3 +45,57 @@
     .c-should-limit article:nth-of-type(n+3)
       display: none
      
+  &__photo
+    @include desktop
+      position: relative
+
+      .c-overlay
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        opacity: 1
+        transition: 250ms opacity
+        cursor: default
+
+        &:hover
+          opacity: 0
+
+
+        strong
+          font-family: $font-quicksand
+          font-size: 32px
+          line-height: 40px
+          color: #fff
+
+        p
+          font-family: $font-quicksand
+          font-style: normal
+          font-weight: 500
+          font-size: 20px
+          line-height: 25px
+          color: #fff
+          max-width: 366px
+
+  // Lib styles
+  &__masonry-grid
+    display: -webkit-box 
+    display: -ms-flexbox 
+    display: flex
+    margin-left: -18px
+    margin-bottom: 180px - 18px
+    width: auto
+
+  &__masonry-collumn 
+    padding-left: 18px
+    background-clip: padding-box
+  
+  &__masonry-collumn  > article  
+    margin-bottom: 18px
