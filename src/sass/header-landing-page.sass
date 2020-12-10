@@ -115,7 +115,8 @@
         margin-bottom: 40px
 
     .c-phrases
-      position: relative
+      @include desktop
+        position: relative
 
       span
         width: 620px
@@ -135,6 +136,7 @@
 
         @include mobile
           max-width: 88%
+          top: auto
           bottom: 6%
           left: 6%
           font-size: 22px

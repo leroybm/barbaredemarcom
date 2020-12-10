@@ -40,7 +40,7 @@ const Footer = class extends React.Component {
                 <FontAwesomeIcon icon={faWhatsapp}/>
               </Link>
 
-              <Link to="https://medium.com" target="_blank">
+              <Link to="https://medium.com" target="_blank" className="c-fix-medium-link">
                 <FontAwesomeIcon icon={faMediumM}/>
               </Link>
             </div>
