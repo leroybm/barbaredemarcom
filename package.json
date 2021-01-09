@@ -45,6 +45,7 @@
   "main": "n/a",
   "scripts": {
     "clean": "gatsby clean",
+    "gui": "yarn && yarn start",
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",

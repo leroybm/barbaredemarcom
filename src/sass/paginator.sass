@@ -1,0 +1,41 @@
+.c-paginator
+    display: flex
+    justify-content: space-between
+
+    a
+        color: #363636
+        border: 2px solid #363636
+        border-radius: 7.5px
+        width: 2.5rem
+        height: 2.5rem
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 1.2rem
+        transition: transform 200ms 
+
+        &:hover
+            transform: scale(1.1)
+
+    &__previous
+        
+    &__next
+        
+    &__page-list
+        margin: 0 1rem
+        display: flex
+
+        @include mobile
+            margin: 0 0.5rem
+
+        a
+            font-weight: bold
+            margin: 0 0.5rem
+
+            @include mobile
+                margin: 0 0.25rem
+
+        .current
+            background: #363636
+            color: #fff
+

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, Link } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
@@ -8,7 +8,7 @@ class BlogRoll extends React.Component {
     const { data, internal } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
-    console.log('[BlogRoll]', this.props)
+    const getTitle = title => title.length > 45 ? `${title.slice(0, 45)}...` : title;
 
     return (
       <section className={`c-blog ${internal ? 'is-internal' : ''}`} id="blog">
@@ -26,7 +26,7 @@ class BlogRoll extends React.Component {
                         alt: `Imagem do post ${post.frontmatter.title}`, 
                       }} 
                     />{/* TODO: Proper alt */}
-                    <strong>{post.frontmatter.title}</strong>
+                    <strong>{getTitle(post.frontmatter.title)}</strong>
                   </header>
                   <p>{post.excerpt}</p>
                   <a href={post.fields.slug}>Continue lendo</a> {/* TODO: Change to Link */}
@@ -35,7 +35,7 @@ class BlogRoll extends React.Component {
             }
           </div>
   
-          <a href="#a">Mais publicações</a>
+          <Link to="/blog">Mais publicações</Link>
         </div>
       </section>
     )
@@ -58,10 +58,11 @@ export default ({ internal }) => (
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          limit: 3
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 170)
               id
               fields {
                 slug

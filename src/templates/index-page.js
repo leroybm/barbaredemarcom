@@ -52,6 +52,19 @@ export const IndexPageTemplate = ({
     }
   }, [carousselDimensions, setCarousselDimensions]);
 
+  useEffect(() => {
+    // Sets what slide is currently active
+    const calculateCurrentSlide = () => document
+      .querySelector('.carousel__slider-tray').childNodes
+      .forEach((childNode, key) => childNode.ariaSelected === "true" && setCurrentSlide(key));
+
+    const intervalId = setInterval(calculateCurrentSlide, 1000);
+
+    return () => {
+      clearInterval(intervalId)
+    }
+  }, [setCurrentSlide]);
+
   return (
     <main>
       <section className="c-what-is-therapy" id="what-is-therapy">

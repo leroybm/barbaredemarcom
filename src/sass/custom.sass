@@ -1,10 +1,11 @@
 // Vars
-$barbara-blue: linear-gradient(180deg, #2888AD 0%, #0378A6 100%)
+$barbara-blue: linear-gradient(180deg, #07698F 0%, #1180AB 100%)
+$solid-blue: #07698F
 
 $font-amatic: 'Amatic SC', cursive
 $font-quicksand: 'Quicksand', sans-serif
 
-$body-padding: 72px
+$body-padding: 3%
 $body-padding-mobile: 24px
 
 // Overwriting defaults
@@ -79,11 +80,12 @@ $mobile-width: 768px
 %hamburger-menu-mobile
   @include mobile
     .c-hamburger-menu
+      height: 32px
+      line-height: 32px
       font-family: $font-quicksand
       font-style: normal
       font-weight: 500
       font-size: 16px
-      line-height: 24px
       text-transform: uppercase
       background: transparent
       margin: 0
@@ -108,7 +110,7 @@ $mobile-width: 768px
 
 // General layout classes
 .c-container
-  max-width: 1110px + 24px
+  max-width: 1110px + 24px !important
   margin: 0 auto
   padding: 24px
 
@@ -131,3 +133,4 @@ $mobile-width: 768px
 @import './footer.sass'
 @import './blog'
 @import './blog-post'
+@import './paginator'

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.svg';
+// import banner from '../img/mulher-nebulosa.png';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { windowScrollTo } from 'seamless-scroll-polyfill'
 
@@ -82,6 +83,7 @@ const Navbar = class extends React.Component {
 
     return (
       <div className="c-header-landing-page">
+        <div className="c-bg"></div>
         <nav
           className="c-navbar navbar is-transparent"
           role="navigation"
@@ -142,6 +144,9 @@ const Navbar = class extends React.Component {
                 {phrases}
               </ReactCSSTransitionGroup>
             </div>
+          </div>
+          <div className="c-bg-banner">
+              {/* <img src={banner} alt="Banner" /> */}
           </div>
         </div>
       </div>

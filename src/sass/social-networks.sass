@@ -1,8 +1,10 @@
 .c-social-networks
   position: fixed
   left: $body-padding
-  bottom: 64px
+  bottom: $body-padding
   transition: ease-in-out opacity 100ms
+  display: grid
+  gap: 8px
 
   @include desktop
     &.hidden
@@ -12,6 +14,7 @@
 
   @include mobile
     display: flex
+    gap: 16px
     position: absolute
     left: auto
     bottom: auto
@@ -20,21 +23,25 @@
 
   a
     color: rgba(0, 0, 0, 0.6)
-    font-size: 40px
-    height: 35px
-    display: block
+    font-size: 32px
+    width: 40px
+    height: 40px
+    @extend %flex-center-center
 
     @include mobile
       font-size: 24px
-      height: 24px
+      width: 32px
+      height: 32px
       color: rgba(0, 0, 0, 0.6)
-
-    &:not(:last-of-type)
-      margin-bottom: 22px
-
-      @include mobile
-        margin-bottom: 0
-        margin-right: 22px
 
   svg
     display: block
+    width: 1em
+  
+  .c-fix-medium-link svg
+    border: 2px solid
+    border-radius: 8px
+    padding: 5px
+    
+    @include mobile
+      padding: 4px
