@@ -29,9 +29,25 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const pages = result.data.allMarkdownRemark.edges;
+    let posts = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.templateKey === 'blog-post');
+    const postsPerPage = 6;
+    const numPages = Math.ceil(posts.length / postsPerPage);
 
-    posts.forEach((edge) => {
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i}`,
+        component: path.resolve("./src/templates/blog-list-template.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
+
+    pages.forEach((edge) => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
@@ -49,7 +65,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
+    pages.forEach((edge) => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags)
       }

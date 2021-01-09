@@ -9,7 +9,7 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="c-footer">
-        <div class="c-container">
+        <div className="c-container">
           <div className="c-footer__menu">
             <nav>
               <ul>
