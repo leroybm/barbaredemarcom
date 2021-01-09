@@ -54,15 +54,14 @@ export const IndexPageTemplate = ({
 
   useEffect(() => {
     // Sets what slide is currently active
-    const calculateCurrentSlide = () => {
-      document.querySelector('.carousel__slider-tray').childNodes.forEach((childNode, key) => childNode.ariaSelected === "true" && setCurrentSlide(key));
-      console.log('spam')
-    };
+    const calculateCurrentSlide = () => document
+      .querySelector('.carousel__slider-tray').childNodes
+      .forEach((childNode, key) => childNode.ariaSelected === "true" && setCurrentSlide(key));
 
-    setInterval(calculateCurrentSlide, 1000);
+    const intervalId = setInterval(calculateCurrentSlide, 1000);
 
     return () => {
-      clearInterval(calculateCurrentSlide)
+      clearInterval(intervalId)
     }
   }, [setCurrentSlide]);
 
