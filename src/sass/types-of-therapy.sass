@@ -2,6 +2,9 @@
   padding: 180px 0 78px
   background: url('../img/bg_horizontal_line 2.svg') repeat-x bottom
 
+  @include highres
+    background: url('../img/bg_horizontal_line 2.svg') repeat-x bottom, url('../img/c-types-of-therapy__smoke-1.jpg') top left no-repeat, url('../img/c-types-of-therapy__smoke-2.jpg') bottom right no-repeat
+
   @include mobile
     padding: 56px 0 39px
 
@@ -27,6 +30,20 @@
 
         @include mobile
           font-size: $body-padding-mobile
+
+  .c-slides
+    position: relative
+    
+    @include highres
+      &::after
+        content: '' 
+        position: absolute
+        right: -70px
+        top: -60px
+        background: url('../img/c-types-of-therapy__smoke-3.jpg') no-repeat right
+        width: 309px
+        height: 187px
+        z-index: -1
 
   .c-slide
     display: flex

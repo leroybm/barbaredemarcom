@@ -1,5 +1,17 @@
 .c-about-barbara
   margin-bottom: 180px
+  position: relative
+
+  @include highres
+    &::after
+      content: '' 
+      position: absolute
+      left: 0
+      bottom: -180px
+      background: url('../img/c-about-barbara__smoke-1.jpg') no-repeat right
+      width: 1177px
+      height: 1080px
+      z-index: -2
 
   @include mobile
     margin-bottom: 57px
