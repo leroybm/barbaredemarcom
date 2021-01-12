@@ -4,6 +4,23 @@
       max-width: 900px !important 
       padding-bottom: 105px
 
+  &__background-shadow
+    @include highres
+      width: 100%
+      display: block
+      position: relative
+
+      &::after
+        content: ''
+        width: 593px
+        height: 464px
+        display: block
+        position: absolute
+        right: 0
+        bottom: 0
+        background: url('../img/c-types-of-therapy-internal__smoke-3.jpg') no-repeat right
+        background-size: contain
+
   h1, h2
     font-family: $font-amatic
     font-style: normal
@@ -18,6 +35,20 @@
       font-size: 90px
       line-height: 113px
       color: rgba(0, 0, 0, 0.87)
+
+  h1
+    position: relative
+
+    @include highres
+      &::after
+        content: ''
+        position: absolute
+        right: calc(50% + -150px)
+        top: 13px
+        width: 209px
+        height: 133px
+        z-index: -1
+        background-size: contain
 
   h2
     text-align: left
@@ -80,3 +111,39 @@
 
     img
       margin-right: 8px
+
+    &.c-couple-therapy
+    h1
+      position: relative
+    
+      @include highres
+        &::after
+          content: ''
+          position: absolute
+          right: calc(50% + -150px)
+          top: 13px
+          width: 209px
+          height: 133px
+          z-index: -1
+          background-size: contain
+          transform: rotate(14deg)
+          background: url('../img/c-types-of-therapy-internal__smoke-1.jpg') no-repeat right
+          background-size: contain
+
+  &.c-individual-therapy
+    h1
+      @include highres
+        &::after
+          right: calc(50% - 70px)
+          top: -7px
+          background: url('../img/c-types-of-therapy-internal__smoke-1.jpg') no-repeat right
+
+  &.c-couple-therapy
+    h1
+      @include highres
+        &::after
+          right: calc(50% - 160px)
+          top: -55px
+          width: 208px
+          height: 200px
+          background: url('../img/c-types-of-therapy-internal__smoke-2.jpg') no-repeat right

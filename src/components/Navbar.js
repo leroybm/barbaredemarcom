@@ -56,20 +56,14 @@ const Navbar = class extends React.Component {
             aria-hidden={true}
           >
             <div className="c-navbar-end navbar-end has-text-centered">
-              <Link className="c-navbar-item navbar-item" to="/#what-is-therapy">
-                O que é
+              <Link className="c-navbar-item navbar-item" to="/">
+                Inicio
               </Link>
-              <Link className="c-navbar-item navbar-item" to="/#for-who">
-                Para quem
+              <Link className="c-navbar-item navbar-item" to="/sobre">
+                Sobre
               </Link>
-              <Link className="c-navbar-item navbar-item" to="/#about-barbara">
-                Quem faz
-              </Link>
-              <Link className="c-navbar-item navbar-item" to="/#blog">
+              <Link className="c-navbar-item navbar-item" to="/blog">
                 Blog
-              </Link>
-              <Link className="c-navbar-item navbar-item" to="/#contact">
-                Contato
               </Link>
             </div>
           </div>
