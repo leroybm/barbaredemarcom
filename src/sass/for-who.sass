@@ -9,7 +9,19 @@
     max-width: 1010px !important
 
   h2
+    position: relative
     @extend %page-title
+    
+    @include highres
+      &::after
+        content: '' 
+        position: absolute
+        right: calc(50% - 30px)
+        top: -47px
+        background: url('../img/c-for-who__smoke-1.jpg') no-repeat right
+        width: 309px
+        height: 187px
+        z-index: -1
 
     @include mobile
       font-size: 64px

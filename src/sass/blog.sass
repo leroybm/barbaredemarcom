@@ -9,7 +9,6 @@
       h2, .c-post strong, .c-post p, .c-post a
         color: #fff !important
 
-
   @include mobile
     padding: 56px 0
 
@@ -21,6 +20,21 @@
     line-height: 113px
     text-align: center
     margin-bottom: 105px
+    position: relative
+    
+    @include highres
+      &::after
+        content: ''
+        position: absolute
+        right: calc(50% + -150px)
+        top: 13px
+        width: 209px
+        height: 133px
+        z-index: -1
+        background-size: contain
+        transform: rotate(14deg)
+        background: url('../img/c-types-of-therapy__smoke-3.jpg') no-repeat right
+        background-size: contain
 
     @include mobile
       font-size: 64px

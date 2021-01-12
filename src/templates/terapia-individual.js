@@ -11,7 +11,7 @@ export const TerapiaIndividualTemplate = ({ data }) => {
   const { title, firstText, image, italicText, secondTitle, secondText, whatsappNumber } = data;
 
   return (
-    <main className="c-internal-therapy-type">
+    <main className="c-internal-therapy-type c-individual-therapy">
       <div className="c-container container">
         <h1 dangerouslySetInnerHTML={{ __html: title }} />
 
@@ -33,6 +33,7 @@ export const TerapiaIndividualTemplate = ({ data }) => {
 
         <button onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}><img src={cContactWhats} alt="Icone do whatsapp" />Vamos Conversar</button>
       </div>
+      <span class="c-internal-therapy-type__background-shadow"></span>
       <BlogRoll internal={true} />
     </main>
   )

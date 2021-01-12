@@ -1,4 +1,9 @@
 .c-about-roll
+  margin-top: 80px
+
+  @include mobile
+    margin-top: 0px
+
   .c-container
     @include desktop
       max-width: 1300px !important
@@ -9,7 +14,24 @@
     font-size: 64px
     line-height: 81px
     text-align: center
-    margin-bottom: 46px
+    margin-bottom: 140px
+
+    @include mobile
+      margin-bottom: 46px
+
+    @include highres
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        right: calc(50% + -209px)
+        top: -62px
+        width: 230px
+        height: 203px
+        z-index: -1
+        background-size: contain
+        background: url('../img/c-about-page-internal__smoke-3.jpg') no-repeat right 
 
   img
     display: block

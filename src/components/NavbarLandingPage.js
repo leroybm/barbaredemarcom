@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.svg';
-// import banner from '../img/mulher-nebulosa.png';
+import banner from '../img/mulher-nebulosa.png';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { windowScrollTo } from 'seamless-scroll-polyfill'
 
@@ -146,7 +146,7 @@ const Navbar = class extends React.Component {
             </div>
           </div>
           <div className="c-bg-banner">
-              {/* <img src={banner} alt="Banner" /> */}
+              <img src={banner} alt="Banner" />
           </div>
         </div>
       </div>

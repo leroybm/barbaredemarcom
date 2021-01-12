@@ -49,6 +49,7 @@ export const AboutPageTemplate = () => {
             </p>
           </div>
         </div>
+        <span className="c-internal-about__background-shadow"></span>
       </section>
       <AboutRoll />
     </main>
