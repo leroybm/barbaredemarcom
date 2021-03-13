@@ -5,6 +5,7 @@ import poweredBy from '../img/powered-by.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faWhatsapp, faMediumM } from '@fortawesome/free-brands-svg-icons'
 
+
 const Footer = class extends React.Component {
   render() {
     return (
@@ -33,15 +34,15 @@ const Footer = class extends React.Component {
           <div className="c-footer__info">
             <div className="c-footer__info__social">
               <Link to="https://instagram.com" target="_blank">
-                <FontAwesomeIcon icon={faInstagram}/>
+                <FontAwesomeIcon icon={faInstagram} />
               </Link>
 
               <Link to="https://whatsapp.com" target="_blank">
-                <FontAwesomeIcon icon={faWhatsapp}/>
+                <FontAwesomeIcon icon={faWhatsapp} />
               </Link>
 
               <Link to="https://medium.com" target="_blank" className="c-fix-medium-link">
-                <FontAwesomeIcon icon={faMediumM}/>
+                <FontAwesomeIcon icon={faMediumM} />
               </Link>
             </div>
 
@@ -54,10 +55,10 @@ const Footer = class extends React.Component {
         </div>
 
         <div className="c-footer__brand">
-            <a href="http://pries.com.br/">
-              <img src={poweredBy} alt="Feito por Guilherme Pries e Leroy Medeiros"/>
-            </a>
-          </div>
+          <a href="http://pries.com.br/">
+            <img src={poweredBy} alt="Feito por Guilherme Pries e Leroy Medeiros" />
+          </a>
+        </div>
       </footer>
     )
   }
