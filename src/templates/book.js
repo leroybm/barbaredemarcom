@@ -5,12 +5,11 @@ import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { InlineWidget } from "react-calendly";
 
-
 export const BookTemplate = () => {
   return (
     <main>
       <section className="c-internal-about">
-        <InlineWidget url='https://calendly.com/leroym/60min' ></InlineWidget>
+        <InlineWidget url='https://calendly.com/leroym/60min' />
       </section>
       <BlogRoll />
     </main>
@@ -23,9 +22,7 @@ BookTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const Book = ({ data }) => {
-  // const { markdownRemark: post } = data
-
+const Book = () => {
   return (
     <Layout>
       <BookTemplate />
