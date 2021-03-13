@@ -65,6 +65,8 @@ export const IndexPageTemplate = ({
     }
   }, [setCurrentSlide]);
 
+  console.log(typesOfTherapy);
+
   return (
     <main>
       <section className="c-what-is-therapy" id="what-is-therapy">
@@ -296,6 +298,7 @@ export const pageQuery = graphql`
             }
           }
           image1alt
+          title2
           body2
           image2 {
             childImageSharp {
