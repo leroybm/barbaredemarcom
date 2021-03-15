@@ -19,17 +19,17 @@ body
   font-family: $font-quicksand
 
 $mobile-width: 768px
-$high-res-width: 1920px
+$high-res-width: 1366px
 
-@mixin mobile 
+@mixin mobile
   @media (max-width: $mobile-width)
     @content
 
-@mixin desktop 
+@mixin desktop
   @media (min-width: $mobile-width)
     @content
 
-@mixin highres 
+@mixin highres
   @media (min-width: $high-res-width), (prefers-reduced-data: no-preference)
     @content
 
@@ -122,8 +122,9 @@ $high-res-width: 1920px
   @include mobile
     width: 100%
     padding: 0 $body-padding-mobile
-    
+
 // Components / Sections
+
 @import './header-landing-page'
 @import './header'
 @import './social-networks'
