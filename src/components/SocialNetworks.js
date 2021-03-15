@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faWhatsapp, faMediumM } from '@fortawesome/free-brands-svg-icons'
 import { throttle } from 'lodash';
@@ -34,17 +33,17 @@ const SocialNetworks = class extends React.Component {
   render() {
     return (
       <div className={`c-social-networks ${this.state.hidden ? 'hidden' : ''}`}>
-        <Link to="https://instagram.com" target="_blank">
-          <FontAwesomeIcon icon={faInstagram}/>
-        </Link>
+        {/* <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faInstagram} />
+        </a> */}
 
-        <Link to="https://whatsapp.com" target="_blank">
-          <FontAwesomeIcon icon={faWhatsapp}/>
-        </Link>
+        <a href="https://wa.me/+554899532660" target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faWhatsapp} />
+        </a>
 
-        <Link to="https://medium.com" target="_blank" className="c-fix-medium-link">
-          <FontAwesomeIcon icon={faMediumM}/>
-        </Link>
+        {/* <a href="https://medium.com" target="_blank" rel="noreferrer" className="c-fix-medium-link">
+          <FontAwesomeIcon icon={faMediumM} />
+        </a> */}
       </div>
     )
   }
