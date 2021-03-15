@@ -23,7 +23,7 @@ class AboutRoll extends React.Component {
 
           <div className={`c-about-roll__list ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
             {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
-              <article className="c-about-roll__photo" key={post.id}>
+              <div className="c-about-roll__photo" key={post.id}>
                 <header>
                   <PreviewCompatibleImage
                     imageInfo={{
@@ -36,7 +36,7 @@ class AboutRoll extends React.Component {
                   <strong>{post.frontmatter.title}</strong>
                   <p>{post.excerpt}</p>
                 </div>
-              </article>
+              </div>
             ))
             }
           </div>

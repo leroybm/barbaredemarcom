@@ -66,10 +66,23 @@
   @include mobile
     .c-should-limit article:nth-of-type(n+3)
       display: none
-     
+
+  &__list
+    @include desktop
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 16px
+
   &__photo
     @include desktop
       position: relative
+
+      img
+        filter: grayscale(0.8)
+
+      &:hover
+        img
+          filter: grayscale(0)
 
       .c-overlay
         position: absolute
@@ -82,7 +95,7 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        background: rgba(0, 0, 0, 0.7)
         opacity: 1
         transition: 250ms opacity
         cursor: default
@@ -105,19 +118,3 @@
           line-height: 25px
           color: #fff
           max-width: 366px
-
-  // Lib styles
-  &__masonry-grid
-    display: -webkit-box 
-    display: -ms-flexbox 
-    display: flex
-    margin-left: -18px
-    margin-bottom: 180px - 18px
-    width: auto
-
-  &__masonry-collumn 
-    padding-left: 18px
-    background-clip: padding-box
-  
-  &__masonry-collumn  > article  
-    margin-bottom: 18px
