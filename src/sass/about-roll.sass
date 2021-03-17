@@ -69,16 +69,35 @@
 
   &__list
     @include desktop
-    display: grid
-    grid-template-columns: 1fr 1fr
-    gap: 16px
+      display: grid
+      grid-template-columns: 1.49fr 1fr
+      grid-template-rows: auto auto auto auto auto auto
+      grid-template-areas: "grid1 grid2" "grid1 grid2" "grid3 grid2" "grid3 grid4" "grid5 grid4" "grid5 grid4"
+      gap: 16px
+      margin-bottom: 16px
+
+      div#grid1  
+        grid-area: grid1
+      div#grid2
+        grid-area: grid2
+      div#grid3
+        grid-area: grid3
+      div#grid4
+        grid-area: grid4
+      div#grid5
+        grid-area: grid5
+
+      &.mirror
+        grid-template-columns: 1fr 1.49fr
+        grid-template-areas: "grid2 grid1" "grid2 grid1" "grid2 grid3" "grid4 grid3" "grid4 grid5" "grid4 grid5"
 
   &__photo
     @include desktop
       position: relative
 
       img
-        filter: grayscale(0.8)
+        filter: grayscale(1)
+        transition: filter 0.5s
 
       &:hover
         img
@@ -95,9 +114,9 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        background: rgba(0, 0, 0, 0.7)
+        background: rgba(0, 0, 0, 0.6)
         opacity: 1
-        transition: 250ms opacity
+        transition: 300ms opacity
         cursor: default
 
         &:hover
@@ -114,7 +133,8 @@
           font-family: $font-quicksand
           font-style: normal
           font-weight: 500
-          font-size: 20px
-          line-height: 25px
+          font-size: 1.1rem
+          line-height: 1.3
+          text-align: justify
           color: #fff
-          max-width: 366px
+          max-width: 350px

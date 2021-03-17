@@ -23,15 +23,30 @@ class AboutRoll extends React.Component {
 
           <div className={`c-about-roll__list ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
             {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
-              <div className="c-about-roll__photo" key={post.id}>
-                <header>
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: post.frontmatter.featuredimage,
-                      alt: `Imagem da foto ${post.frontmatter.title}`,
-                    }}
-                  />
-                </header>
+              <div className="c-about-roll__photo" key={post.id} id={post.frontmatter.title}>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: post.frontmatter.featuredimage,
+                    alt: `Imagem da foto ${post.frontmatter.title}`,
+                  }}
+                />
+                <div class="c-overlay">
+                  <strong>{post.frontmatter.title}</strong>
+                  <p>{post.excerpt}</p>
+                </div>
+              </div>
+            ))
+            }
+          </div>
+          <div className={`c-about-roll__list mirror ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
+            {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
+              <div className="c-about-roll__photo" key={post.id} id={post.frontmatter.title}>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: post.frontmatter.featuredimage,
+                    alt: `Imagem da foto ${post.frontmatter.title}`,
+                  }}
+                />
                 <div class="c-overlay">
                   <strong>{post.frontmatter.title}</strong>
                   <p>{post.excerpt}</p>
