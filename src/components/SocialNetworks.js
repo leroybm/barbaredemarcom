@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// eslint-disable-next-line
 import { faInstagram, faWhatsapp, faMediumM } from '@fortawesome/free-brands-svg-icons'
 import { throttle } from 'lodash';
 

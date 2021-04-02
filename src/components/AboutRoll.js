@@ -30,7 +30,7 @@ class AboutRoll extends React.Component {
                     alt: `Imagem da foto ${post.frontmatter.title}`,
                   }}
                 />
-                <div class="c-overlay">
+                <div className="c-overlay">
                   <strong>{post.frontmatter.title}</strong>
                   <p>{post.excerpt}</p>
                 </div>
@@ -47,7 +47,7 @@ class AboutRoll extends React.Component {
                     alt: `Imagem da foto ${post.frontmatter.title}`,
                   }}
                 />
-                <div class="c-overlay">
+                <div className="c-overlay">
                   <strong>{post.frontmatter.title}</strong>
                   <p>{post.excerpt}</p>
                 </div>

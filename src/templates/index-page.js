@@ -54,9 +54,13 @@ export const IndexPageTemplate = ({
 
   useEffect(() => {
     // Sets what slide is currently active
-    const calculateCurrentSlide = () => document
-      .querySelector('.carousel__slider-tray').childNodes
-      .forEach((childNode, key) => childNode.ariaSelected === "true" && setCurrentSlide(key));
+    const calculateCurrentSlide = () => {
+      const tray = document.querySelector('.carousel__slider-tray');
+      
+      if (tray && tray.childNodes) {
+        tray.childNodes.forEach((childNode, key) => childNode.ariaSelected === "true" && setCurrentSlide(key));
+      }
+    }
 
     const intervalId = setInterval(calculateCurrentSlide, 1000);
 
@@ -64,8 +68,6 @@ export const IndexPageTemplate = ({
       clearInterval(intervalId)
     }
   }, [setCurrentSlide]);
-
-  console.log(typesOfTherapy);
 
   return (
     <main>

@@ -257,9 +257,9 @@ collections:
             name: whatsappNumber
             type: string
 
-      - file: src/pages/about/index.md
-        label: About
-        name: about
+      - file: src/pages/sobre/index.md
+        label: Sobre
+        name: sobre
         fields:
           - label: Template Key
             name: templateKey
@@ -268,9 +268,21 @@ collections:
           - label: Title
             name: title
             widget: string
-          - label: Body
-            name: body
-            widget: markdown
+          - label: noQueAcredito1
+            name: noQueAcredito1
+            widget: text
+          - label: noQueAcredito2
+            name: noQueAcredito2
+            widget: text
+          - label: noQueAcredito3
+            name: noQueAcredito3
+            widget: text
+          - label: noQueAcreditoImg
+            name: noQueAcreditoImg
+            widget: image
+          - label: experiencia
+            name: experiencia
+            widget: text
       - file: src/pages/products/index.md
         label: Products Page
         name: products
