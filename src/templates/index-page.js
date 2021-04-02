@@ -7,7 +7,7 @@ import { faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons
 import { faCircle as faCircleSolid } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/LayoutLandingPage'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { CarouselProvider, Slider, Slide, Dot } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -22,7 +22,7 @@ export const IndexPageTemplate = ({
 }) => {
   let [currentSlide, setCurrentSlide] = useState(0);
   let [carousselDimensions, setCarousselDimensions] = useState({ height: 411, width: 1110 }); // Desktop sizing
-  
+
   useEffect(() => {
     // Sets carrousel dimensions dinamically as our carrousel lib doesn't do it automatically
     const findCarousselDimensions = debounce(() => {
@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({
         .reduce((finalHeight, currentElement) => currentElement.clientHeight >= finalHeight ? currentElement.clientHeight : finalHeight, 0);
 
       const width = elements[0] && elements[0].clientWidth;
-      
+
       // For the love of god, only set it when it's different, otherwise react will go mental and set it every debounce millisecond interval
       // I don't like this pattern do, but what can we do? 
       if (carousselDimensions.height !== height || carousselDimensions.width !== width) {
@@ -48,15 +48,19 @@ export const IndexPageTemplate = ({
 
     window.addEventListener('resize', findCarousselDimensions);
     return () => {
-       window.removeEventListener('resize', findCarousselDimensions);
+      window.removeEventListener('resize', findCarousselDimensions);
     }
   }, [carousselDimensions, setCarousselDimensions]);
 
   useEffect(() => {
     // Sets what slide is currently active
-    const calculateCurrentSlide = () => document
-      .querySelector('.carousel__slider-tray').childNodes
-      .forEach((childNode, key) => childNode.ariaSelected === "true" && setCurrentSlide(key));
+    const calculateCurrentSlide = () => {
+      const tray = document.querySelector('.carousel__slider-tray');
+      
+      if (tray && tray.childNodes) {
+        tray.childNodes.forEach((childNode, key) => childNode.ariaSelected === "true" && setCurrentSlide(key));
+      }
+    }
 
     const intervalId = setInterval(calculateCurrentSlide, 1000);
 
@@ -70,17 +74,17 @@ export const IndexPageTemplate = ({
       <section className="c-what-is-therapy" id="what-is-therapy">
         <div className="c-container">
           <h2>{whatIsTherapy.title}</h2>
-  
+
           <p>{whatIsTherapy.body}</p>
           <p>
             {/* TODO: Add this to CMS */}
             Percebo o processo terapêutico como um processo de co-autoria, onde nesta via de mão dupla o terapeuta e cliente caminham lado a lado, ele acontece através da conexão e abertura para o desconhecido e o já conhecido, para mim estar em terapia é fazer parte de um relacionamento: honesto, humilde e mutuamente transformador.
-            <br/><br/>
+            <br /><br />
             A terapia é uma experiência existencial do autoentendimento.
           </p>
         </div>
       </section>
-  
+
       <section className="c-types-of-therapy">
         <div className="c-container">
           <CarouselProvider
@@ -101,7 +105,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                 </Slide>
-  
+
                 <Slide index={1}>
                   <div className="c-slide">
                     <div className="c-slide-image">
@@ -113,7 +117,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                 </Slide>
-  
+
                 <Slide index={2}>
                   <div className="c-slide">
                     <div className="c-slide-image">
@@ -127,7 +131,7 @@ export const IndexPageTemplate = ({
                 </Slide>
               </Slider>
             </div>
-  
+
             <div className="c-slides-nav">
               <nav>
                 <Dot slide={0} onClick={() => setCurrentSlide(0)}>
@@ -144,43 +148,43 @@ export const IndexPageTemplate = ({
           </CarouselProvider>
         </div>
       </section>
-  
+
       <section className="c-for-who" id="for-who">
         <div className="c-container">
           <h2>{forWho.title}</h2>
-  
+
           <div className="c-for-who__types">
             <div className="c-for-who__type">
-              <img src={get(forWho, 'types.individual.image.childImageSharp.fluid.src', '')} alt={forWho.types.individual.imgAlt}/>
-  
+              <img src={get(forWho, 'types.individual.image.childImageSharp.fluid.src', '')} alt={forWho.types.individual.imgAlt} />
+
               <h3>{forWho.types.individual.title}</h3>
-  
+
               <p>{forWho.types.individual.body}</p>
-  
+
               <Link to={forWho.types.individual.url}>{forWho.buttonLabel}</Link>
             </div>
-  
+
             <div className="c-for-who__type">
-              <img src={get(forWho, 'types.couple.image.childImageSharp.fluid.src', '')} alt={forWho.types.couple.imgAlt}/>
-  
+              <img src={get(forWho, 'types.couple.image.childImageSharp.fluid.src', '')} alt={forWho.types.couple.imgAlt} />
+
               <h3>{forWho.types.couple.title}</h3>
-  
+
               <p>{forWho.types.couple.body}</p>
-  
+
               <Link to={forWho.types.couple.url}>{forWho.buttonLabel}</Link>
             </div>
           </div>
         </div>
       </section>
-  
+
       <section className="c-about-barbara" id="about-barbara">
         <div className="c-container">
           <h2>{aboutBarbara.title}</h2>
-  
+
           <div className="c-columns">
             <div className="c-about">
               <p>{aboutBarbara.body}</p>
-  
+
               <Link to={aboutBarbara.url}>{aboutBarbara.buttonLabel}</Link>
             </div>
             <div className="c-photo">
@@ -189,19 +193,19 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-  
+
       <section className="c-contact" id="contact">
         <div className="c-container">
           <h2>{contact.title}</h2>
-  
+
           <div className="c-whatsapp">
             <p>{contact.body}</p>
-  
+
             <button onClick={() => window.open(`https://wa.me/${contact.whatsappNumber}`, '_blank')}><img src={cContactWhats} alt="Icone do whatsapp" />{contact.buttonLabel}</button>
           </div>
         </div>
       </section>
-  
+
       <BlogRoll internal={false} />
     </main>
   )
@@ -296,6 +300,7 @@ export const pageQuery = graphql`
             }
           }
           image1alt
+          title2
           body2
           image2 {
             childImageSharp {

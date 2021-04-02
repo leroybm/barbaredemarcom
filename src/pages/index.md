@@ -11,48 +11,43 @@ whatIsTherapy:
     compreendendo melhor nossas versões, quem nos tornamos no passado, como vivemos 
     o presente e buscando ampliar nossa visão de nós mesmos no futuro.
 typesOfTherapy:
-  title1: PARA ENCONTRAR A SI MESMO 1
+  title1: Pra encontrar a si mesmo
   body1: >
-    Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
+    A busca por compreender  os comportamentos e sentimentos, muda a forma como se vive a vida, voltar o olhar para si mesmo dá tempo e possibilita encontrar as chaves que movimentam as respostas e reações que se apresentam ao mundo. É comum que as pessoas passem muito tempo de suas vidas vidas  tentando fugir e esconder sua vulnerabilidade, e a  grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente consigo mesmo.  
 
 
-    Encontrar a si mesmo é um processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e com maior confiança alcançar o equilíbrio na vida pessoal e profissional.
+    A chave para encontrar a si mesmo está em um  processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e traz a confiança para alcançar o equilíbrio na vida pessoal e profissional.
 
+    É como estar em frente ao guarda roupa cheio de roupas que não cabem mais, jogar tudo na cama e reorganizar as peças que ficam e as peças que vão, cada uma terá seu espaço e neste movimento  aos poucos  ir abrindo novos  lugares  para as muitas versões de si que compõem um só.
 
-    A terapia traz a compreensão de quem se é, e como viver no mundo quebrando ciclos e gerando liberdade.
-
-
-    “A vida fica mais leve quando a gente vive pra gente”
-  image1: /img/c-slides-1.jpg
-  image1alt: todo
-  title2: PARA ENCONTRAR A SI MESMO 2
+  image1: ../img/mulher-chave.jpg
+  image1alt: Mulher segurando chave, olhando para sua sombra, que possui uma fechadura no peito.
+  title2: Pra encontrar o seu caminho
   body2: >
-    Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
+    Quando se passa  muito tempo tentando distanciar os aspectos que compõem quem se é na vida, aquelas características, talentos ou pensamentos  que por ventura não combinam com o que supostamente deveria ser, abre-se mão da liberdade e este movimento é o mesmo que permanecer  do lado de fora  de sua  própria história, observando a vida e tempo passar, batalhando internamente para caber  nas exigências do mundo externo.
 
 
-    Encontrar a si mesmo é um processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e com maior confiança alcançar o equilíbrio na vida pessoal e profissional.
+
+    Por isso é tão importante encontrar o seu caminho, é importante andar pela rota que traz o seu jeito de ser a tona, e liberta quem você é! Para isso, primeiro é preciso entender quem anda por este caminho, aceitar quem se é e desenvolver a capacidade de contar a sua história e mostrar sua real face que leva ao viver  de forma autêntica.
 
 
-    A terapia traz a compreensão de quem se é, e como viver no mundo quebrando ciclos e gerando liberdade.
 
+    As conversas em terapia trazem clareza e senso de direção, onde o caminho é construído em parceria, em colaboração e troca mútua entre terapeuta e cliente. Estar em terapia é um processo de entendimento e transformação, e sobretudo é  sentir quem a gente quer e precisa ser.
 
-    “A vida fica mais leve quando a gente vive pra gente”
-  image2: /img/c-slides-1.jpg
-  image2alt: todo
-  title3: PARA ENCONTRAR A SI MESMO 3
+  image2: ../img/mulher-floresta.jpg
+  image2alt: Mulher com olhos cobertos andando por uma floresta, uma fita vermelha corre por entre as arvores
+  title3: Pra abandonar o que paralisa
   body3: >
-    Compreender nossos comportamentos e sentimentos, muda a forma como vivemos a vida. Passamos muito tempo da vida tentando fugir da vulnerabilidade, e a grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente com nós mesmos.
+    Os sentimentos mais intensos que experimentamos são como a ponta de um espinho, quando  espetam causam incômodo, dor e dependendo do tipo do espinho até paralisam. 
 
+    Em determinados momentos da vida,o  medo, a ansiedade,  insegurança, tristeza, depressão, invadem e ganham espaços, trazendo sensações  e levando para  lugares desafiadores e incomuns.
 
-    Encontrar a si mesmo é um processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e com maior confiança alcançar o equilíbrio na vida pessoal e profissional.
+    Estes sentimentos podem até ser anestesiados com um monte de coisas: Series, TV, Alcool, comida, sexo, drogas,  trabalho, compras, internet, perfecionismo,fato é, este entorpecimento com qualquer que seja a atividade atenua momentaneamente mas não cria compreensão ou mudança. Para trazer conexão consigo mesmo  e o  movimento para a vida, é necessário voltar o olhar para si. 
 
+    Neste sentido a terapia não anestesia, ela movimenta a conversa interna e busca novos olhares e caminhos para a relação com o que desafia. Assim é possível construir a compreensão de quem se é, e como viver no mundo quebrar os ciclos viciosos, as relações tóxicas, tudo o  que paralisa, através da profundidade de se reconhecer gerar liberdade de escolha e novos movimentos.
 
-    A terapia traz a compreensão de quem se é, e como viver no mundo quebrando ciclos e gerando liberdade.
-
-
-    “A vida fica mais leve quando a gente vive pra gente”
-  image3: /img/c-slides-1.jpg
-  image3alt: todo
+  image3: ../img/mulher-espelhos.jpg
+  image3alt: Mulher com várias versões de si, cada uma segurando um espelho
 forWho:
   title: Para quem
   buttonLabel: Como funciona
@@ -63,14 +58,14 @@ forWho:
         São tantos os desafios da vida moderna, são tantas as ocupações e necessidades, nos perdemos no tempo, e na agitação do dia a dia. Todas as obrigações cotidianas e a vida que invade  nos fazem esquecer o essencial: Olhar para nós mesmos!
       url: /terapia-individual
       imgAlt: Terapia Individual
-      image: /img/c-hands-1.jpg
+      image: ../img/c-internal-individual-therapy.jpg
     couple:
       title: Terapia de Casal
       body: >
         Estar em terapia de casal é encontrar um lugar seguro e aberto para os diálogos que movimentam a relação, é estar em um espaço que facilita as conversas mais difíceis, que muitas vezes não se consegue abordar sozinhos na relação, e observar de diferentes ângulos a dinâmica de cada casal.
       url: /terapia-de-casal
       imgAlt: Terapia de Casal
-      image: /img/c-hands-2.jpg
+      image: ../img/c-internal-couple-therapy.jpg
 aboutBarbara:
   title: Quem faz
   body: >
@@ -81,10 +76,10 @@ aboutBarbara:
   url: /sobre
   buttonLabel: Mais sobre mim
   imgAlt: None
-  image: /img/c-about-barbara.jpg
-contact: 
+  image: ../img/c-internal-about-page.jpg
+contact:
   title: Contato
   body: Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.
-  buttonLabel:  Vamos conversar
+  buttonLabel: Vamos conversar
   whatsappNumber: 554899532660
 ---

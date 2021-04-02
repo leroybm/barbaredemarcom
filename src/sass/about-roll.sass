@@ -66,10 +66,42 @@
   @include mobile
     .c-should-limit article:nth-of-type(n+3)
       display: none
-     
+
+  &__list
+    @include desktop
+      display: grid
+      grid-template-columns: 1.49fr 1fr
+      grid-template-rows: auto auto auto auto auto auto
+      grid-template-areas: "grid1 grid2" "grid1 grid2" "grid3 grid2" "grid3 grid4" "grid5 grid4" "grid5 grid4"
+      gap: 16px
+      margin-bottom: 16px
+
+      div#grid1  
+        grid-area: grid1
+      div#grid2
+        grid-area: grid2
+      div#grid3
+        grid-area: grid3
+      div#grid4
+        grid-area: grid4
+      div#grid5
+        grid-area: grid5
+
+      &.mirror
+        grid-template-columns: 1fr 1.49fr
+        grid-template-areas: "grid2 grid1" "grid2 grid1" "grid2 grid3" "grid4 grid3" "grid4 grid5" "grid4 grid5"
+
   &__photo
     @include desktop
       position: relative
+
+      img
+        filter: grayscale(1)
+        transition: filter 0.5s
+
+      &:hover
+        img
+          filter: grayscale(0)
 
       .c-overlay
         position: absolute
@@ -82,9 +114,9 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        background: rgba(0, 0, 0, 0.6)
         opacity: 1
-        transition: 250ms opacity
+        transition: 300ms opacity
         cursor: default
 
         &:hover
@@ -101,23 +133,8 @@
           font-family: $font-quicksand
           font-style: normal
           font-weight: 500
-          font-size: 20px
-          line-height: 25px
+          font-size: 1.1rem
+          line-height: 1.3
+          text-align: justify
           color: #fff
-          max-width: 366px
-
-  // Lib styles
-  &__masonry-grid
-    display: -webkit-box 
-    display: -ms-flexbox 
-    display: flex
-    margin-left: -18px
-    margin-bottom: 180px - 18px
-    width: auto
-
-  &__masonry-collumn 
-    padding-left: 18px
-    background-clip: padding-box
-  
-  &__masonry-collumn  > article  
-    margin-bottom: 18px
+          max-width: 350px

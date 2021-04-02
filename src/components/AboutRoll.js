@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import Masonry from 'react-masonry-css'
 import { get } from 'lodash'
 
 class AboutRoll extends React.Component {
@@ -21,36 +20,42 @@ class AboutRoll extends React.Component {
       <section className="c-about-roll" id="about-roll">
         <div className="c-container">
           <h2>Minha História</h2>
-  
+
           <div className={`c-about-roll__list ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
-            <Masonry
-              breakpointCols={{
-                default: 2,
-                768: 1
-              }}
-              className="c-about-roll__masonry-grid"
-              columnClassName="c-about-roll__masonry-collumn"
-            >
-              {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
-                <article className="c-about-roll__photo"  key={post.id}>
-                  <header>
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: post.frontmatter.featuredimage,
-                        alt: `Imagem da foto ${post.frontmatter.title}`, 
-                      }} 
-                    />
-                  </header>
-                  <div class="c-overlay">
-                    <strong>{post.frontmatter.title}</strong>
-                    <p>{post.excerpt}</p>
-                  </div>
-                </article>
-              ))
+            {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
+              <div className="c-about-roll__photo" key={post.id} id={post.frontmatter.title}>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: post.frontmatter.featuredimage,
+                    alt: `Imagem da foto ${post.frontmatter.title}`,
+                  }}
+                />
+                <div className="c-overlay">
+                  <strong>{post.frontmatter.title}</strong>
+                  <p>{post.excerpt}</p>
+                </div>
+              </div>
+            ))
             }
-            </Masonry>
           </div>
-  
+          <div className={`c-about-roll__list mirror ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
+            {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
+              <div className="c-about-roll__photo" key={post.id} id={post.frontmatter.title}>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: post.frontmatter.featuredimage,
+                    alt: `Imagem da foto ${post.frontmatter.title}`,
+                  }}
+                />
+                <div className="c-overlay">
+                  <strong>{post.frontmatter.title}</strong>
+                  <p>{post.excerpt}</p>
+                </div>
+              </div>
+            ))
+            }
+          </div>
+
           {(this.state.shouldLimit && <button onClick={() => this.setState({ shouldLimit: false })}>Carregar Mais</button>)}
         </div>
       </section>
