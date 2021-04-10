@@ -79,7 +79,7 @@ aboutBarbara:
   url: /sobre
   buttonLabel: Mais sobre mim
   imgAlt: None
-  image: ../img/c-internal-about-page.jpg
+  image: ../img/about-home.jpg
 contact:
   title: Contato
   body: Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.

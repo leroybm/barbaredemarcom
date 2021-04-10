@@ -4,7 +4,7 @@
       max-width: 1300px !important
 
     @media (max-width: 1366px)
-      max-width: 1064px !important
+      max-width: 1000px !important
 
   &__background-shadow
     @include highres
@@ -71,6 +71,10 @@
   img
     margin: 16px 0
     border-radius: 8px
+    width: 35%
+
+    @include mobile
+      width: 100%
 
   p
     font-family: $font-quicksand
@@ -116,7 +120,7 @@
 
   .c-desktop-only
     display: flex
-    align-items: center
+    align-items: flex-start
 
   @include desktop
     .c-mobile-only
