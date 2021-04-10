@@ -9,7 +9,7 @@
     padding: 56px 0 39px
 
   .c-slides-nav
-    margin-top: 177px
+    margin-top: 0
 
     @include mobile
       margin-top: 2 * $body-padding-mobile
@@ -33,6 +33,10 @@
 
   .c-slides
     position: relative
+    mix-blend-mode: multiply
+
+    & > div
+      mix-blend-mode: multiply
     
     @include highres
       &::after
@@ -48,14 +52,19 @@
   .c-slide
     display: flex
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
 
     @include mobile
       flex-direction: column
 
   .c-slide-image
-    min-width: 405px
-    margin-right: 75px
+    // min-width: 405px
+    // margin-right: 75px
+    width: 50%
+    padding-right: 75px
+
+    img
+      width: 100%
 
     @include mobile
       min-width: calc(100vw - (2 * #{$body-padding-mobile}))
@@ -63,9 +72,11 @@
       margin-right: 0
 
   .c-slide-body
+    width: 50%
+
     h3
       font-family: $font-amatic
-      font-size: 70px
+      font-size: 65px
       line-height: 88px
       text-align: justify
 

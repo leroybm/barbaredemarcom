@@ -13,40 +13,43 @@ whatIsTherapy:
 typesOfTherapy:
   title1: Pra encontrar a si mesmo
   body1: >
-    A busca por compreender  os comportamentos e sentimentos, muda a forma como se vive a vida, voltar o olhar para si mesmo dá tempo e possibilita encontrar as chaves que movimentam as respostas e reações que se apresentam ao mundo. É comum que as pessoas passem muito tempo de suas vidas vidas  tentando fugir e esconder sua vulnerabilidade, e a  grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente consigo mesmo.  
+    A busca por compreender  os comportamentos e sentimentos, muda a forma como se vive a vida, voltar o olhar para si mesmo dá tempo e possibilita encontrar as chaves que movimentam as respostas e reações que se apresentam ao mundo.
+    
+
+    É comum que as pessoas passem muito tempo de suas vidas vidas  tentando fugir e esconder sua vulnerabilidade, e a  grande maioria não é criada para enfrentar o desconforto e desenvolver habilidades de práticas afetivas e gentis com o outro, e principalmente consigo mesmo.  
 
 
     A chave para encontrar a si mesmo está em um  processo que te ajuda a descobrir seus pontos fracos e fortes, suas criatividades, possibilidades e traz a confiança para alcançar o equilíbrio na vida pessoal e profissional.
 
+
     É como estar em frente ao guarda roupa cheio de roupas que não cabem mais, jogar tudo na cama e reorganizar as peças que ficam e as peças que vão, cada uma terá seu espaço e neste movimento  aos poucos  ir abrindo novos  lugares  para as muitas versões de si que compõem um só.
 
-  image1: ../img/mulher-chave.jpg
+  image1: ../img/chave.jpg
   image1alt: Mulher segurando chave, olhando para sua sombra, que possui uma fechadura no peito.
   title2: Pra encontrar o seu caminho
   body2: >
     Quando se passa  muito tempo tentando distanciar os aspectos que compõem quem se é na vida, aquelas características, talentos ou pensamentos  que por ventura não combinam com o que supostamente deveria ser, abre-se mão da liberdade e este movimento é o mesmo que permanecer  do lado de fora  de sua  própria história, observando a vida e tempo passar, batalhando internamente para caber  nas exigências do mundo externo.
 
 
-
     Por isso é tão importante encontrar o seu caminho, é importante andar pela rota que traz o seu jeito de ser a tona, e liberta quem você é! Para isso, primeiro é preciso entender quem anda por este caminho, aceitar quem se é e desenvolver a capacidade de contar a sua história e mostrar sua real face que leva ao viver  de forma autêntica.
 
 
-
     As conversas em terapia trazem clareza e senso de direção, onde o caminho é construído em parceria, em colaboração e troca mútua entre terapeuta e cliente. Estar em terapia é um processo de entendimento e transformação, e sobretudo é  sentir quem a gente quer e precisa ser.
-
-  image2: ../img/mulher-floresta.jpg
+  image2: ../img/caminho.jpg
   image2alt: Mulher com olhos cobertos andando por uma floresta, uma fita vermelha corre por entre as arvores
   title3: Pra abandonar o que paralisa
   body3: >
     Os sentimentos mais intensos que experimentamos são como a ponta de um espinho, quando  espetam causam incômodo, dor e dependendo do tipo do espinho até paralisam. 
 
+
     Em determinados momentos da vida,o  medo, a ansiedade,  insegurança, tristeza, depressão, invadem e ganham espaços, trazendo sensações  e levando para  lugares desafiadores e incomuns.
+
 
     Estes sentimentos podem até ser anestesiados com um monte de coisas: Series, TV, Alcool, comida, sexo, drogas,  trabalho, compras, internet, perfecionismo,fato é, este entorpecimento com qualquer que seja a atividade atenua momentaneamente mas não cria compreensão ou mudança. Para trazer conexão consigo mesmo  e o  movimento para a vida, é necessário voltar o olhar para si. 
 
-    Neste sentido a terapia não anestesia, ela movimenta a conversa interna e busca novos olhares e caminhos para a relação com o que desafia. Assim é possível construir a compreensão de quem se é, e como viver no mundo quebrar os ciclos viciosos, as relações tóxicas, tudo o  que paralisa, através da profundidade de se reconhecer gerar liberdade de escolha e novos movimentos.
 
-  image3: ../img/mulher-espelhos.jpg
+    Neste sentido a terapia não anestesia, ela movimenta a conversa interna e busca novos olhares e caminhos para a relação com o que desafia. Assim é possível construir a compreensão de quem se é, e como viver no mundo quebrar os ciclos viciosos, as relações tóxicas, tudo o  que paralisa, através da profundidade de se reconhecer gerar liberdade de escolha e novos movimentos.
+  image3: ../img/espelho.jpg
   image3alt: Mulher com várias versões de si, cada uma segurando um espelho
 forWho:
   title: Para quem
