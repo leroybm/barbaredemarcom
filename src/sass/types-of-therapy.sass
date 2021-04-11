@@ -9,7 +9,7 @@
     padding: 56px 0 39px
 
   .c-slides-nav
-    margin-top: 0
+    margin-top: 24px
 
     @include mobile
       margin-top: 2 * $body-padding-mobile
@@ -61,7 +61,7 @@
     // min-width: 405px
     // margin-right: 75px
     width: 50%
-    padding-right: 75px
+    padding-right: 42px
 
     img
       width: 100%
@@ -70,9 +70,13 @@
       min-width: calc(100vw - (2 * #{$body-padding-mobile}))
       margin-bottom: $body-padding-mobile
       margin-right: 0
+      padding: 0
 
   .c-slide-body
-    width: 50%
+    width: 75%
+
+    @include mobile
+      width: 100%
 
     h3
       font-family: $font-amatic
