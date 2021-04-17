@@ -34,17 +34,17 @@ const SocialNetworks = class extends React.Component {
   render() {
     return (
       <div className={`c-social-networks ${this.state.hidden ? 'hidden' : ''}`}>
-        {/* <a href="https://instagram.com" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/terapeuta.barbara.demarco/" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faInstagram} />
-        </a> */}
+        </a>
 
         <a href="https://wa.me/+554899532660" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
 
-        {/* <a href="https://medium.com" target="_blank" rel="noreferrer" className="c-fix-medium-link">
+        <a href="https://medium.com/@terapeuta.barbara.demarco" target="_blank" rel="noreferrer" className="c-fix-medium-link">
           <FontAwesomeIcon icon={faMediumM} />
-        </a> */}
+        </a>
       </div>
     )
   }
