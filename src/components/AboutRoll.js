@@ -2,7 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { get } from 'lodash'
+import { get, orderBy } from 'lodash'
+
+/**
+ * Makes a two dimensional array containing groups of 5 posts
+ * 
+ * @param {object} rawPosts - posts from query
+ * @returns 
+ */
+function createPostGroup(rawPosts, groupSize = 5) {
+  return get(
+    orderBy((rawPosts || []), 'node.frontmatter.order')
+      .reduce((acc, post, i) => {
+        acc.currentGroup.push(post);
+
+        if ((i + 1) % groupSize === 0 || (i + 1) === rawPosts.length) {
+          acc.result.push(acc.currentGroup);
+          acc.currentGroup = [];
+        }
+
+        return acc;
+      }, {
+        currentGroup: [],
+        result: []
+      }),
+    'result',
+    []
+  );
+}
 
 class AboutRoll extends React.Component {
   constructor(props) {
@@ -14,13 +41,37 @@ class AboutRoll extends React.Component {
 
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: rawPosts } = data.allMarkdownRemark
+
+    const postGroup = createPostGroup(rawPosts);
+
+    console.log('[AboutRoll.postGroup]', postGroup, rawPosts);
 
     return (
       <section className="c-about-roll" id="about-roll">
         <div className="c-container">
           <h2>Minha História</h2>
 
+          {postGroup && postGroup.map((posts, i) => 
+            <div className={`c-about-roll__list ${i % 2 ? 'mirror' : ''} ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
+              {posts && posts.map(({ node: post }, j) => (
+                <div className="c-about-roll__photo" key={post.id} id={`grid${((j)%5)+1}`}>
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: post.frontmatter.featuredimage,
+                      alt: `Imagem da foto ${post.frontmatter.title}`,
+                    }}
+                  />
+                  <div className="c-overlay">
+                    <strong>{post.frontmatter.title}</strong>
+                    <p>{post.excerpt}</p>
+                  </div>
+                </div>
+              ))
+              }
+            </div>
+          )}
+{/* 
           <div className={`c-about-roll__list ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
             {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
               <div className="c-about-roll__photo" key={post.id} id={post.frontmatter.title}>
@@ -54,9 +105,9 @@ class AboutRoll extends React.Component {
               </div>
             ))
             }
-          </div>
+          </div> */}
 
-          {(this.state.shouldLimit && <button onClick={() => this.setState({ shouldLimit: false })}>Carregar Mais</button>)}
+          {/* {(this.state.shouldLimit && <button onClick={() => this.setState({ shouldLimit: false })}>Carregar Mais</button>)} */}
         </div>
       </section>
     )
@@ -88,6 +139,7 @@ export default () => (
               }
               frontmatter {
                 title
+                order
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost

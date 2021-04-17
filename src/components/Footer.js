@@ -33,22 +33,22 @@ const Footer = class extends React.Component {
 
           <div className="c-footer__info">
             <div className="c-footer__info__social">
-              <Link to="https://instagram.com" target="_blank">
+              <a href="https://www.instagram.com/terapeuta.barbara.demarco/" target="_blank" rel="noreferrer noopener">
                 <FontAwesomeIcon icon={faInstagram} />
-              </Link>
+              </a>
 
-              <Link to="https://whatsapp.com" target="_blank">
+              <a href="https://wa.me/+554899532660" target="_blank" rel="noreferrer noopener">
                 <FontAwesomeIcon icon={faWhatsapp} />
-              </Link>
+              </a>
 
-              <Link to="https://medium.com" target="_blank" className="c-fix-medium-link">
+              <a href="https://medium.com/@terapeuta.barbara.demarco" target="_blank" className="c-fix-medium-link" rel="noreferrer noopener">
                 <FontAwesomeIcon icon={faMediumM} />
-              </Link>
+              </a>
             </div>
 
             <div className="c-footer__info__contact">
-              <p><a href="mailto:#">barbara@demarco.com</a></p>
-              <p><a href="tel:#">(47) 98765-4321</a></p>
+              <p><a href="mailto:biademarc@gmail.com">biademarc@gmail.com</a></p>
+              <p><a href="tel:+554899532660">(48) 99953-2660</a></p>
             </div>
 
           </div>
