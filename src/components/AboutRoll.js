@@ -53,7 +53,7 @@ class AboutRoll extends React.Component {
           <h2>Minha História</h2>
 
           {postGroup && postGroup.map((posts, i) => 
-            <div className={`c-about-roll__list ${i % 2 ? 'mirror' : ''} ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
+            <div key={i} className={`c-about-roll__list ${i % 2 ? 'mirror' : ''} ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
               {posts && posts.map(({ node: post }, j) => (
                 <div className="c-about-roll__photo" key={post.id} id={`grid${((j)%5)+1}`}>
                   <PreviewCompatibleImage
@@ -71,41 +71,6 @@ class AboutRoll extends React.Component {
               }
             </div>
           )}
-{/* 
-          <div className={`c-about-roll__list ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
-            {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
-              <div className="c-about-roll__photo" key={post.id} id={post.frontmatter.title}>
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: post.frontmatter.featuredimage,
-                    alt: `Imagem da foto ${post.frontmatter.title}`,
-                  }}
-                />
-                <div className="c-overlay">
-                  <strong>{post.frontmatter.title}</strong>
-                  <p>{post.excerpt}</p>
-                </div>
-              </div>
-            ))
-            }
-          </div>
-          <div className={`c-about-roll__list mirror ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
-            {posts && posts.sort(node => get(node, 'post.frontmatter.title')).map(({ node: post }) => (
-              <div className="c-about-roll__photo" key={post.id} id={post.frontmatter.title}>
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: post.frontmatter.featuredimage,
-                    alt: `Imagem da foto ${post.frontmatter.title}`,
-                  }}
-                />
-                <div className="c-overlay">
-                  <strong>{post.frontmatter.title}</strong>
-                  <p>{post.excerpt}</p>
-                </div>
-              </div>
-            ))
-            }
-          </div> */}
 
           {/* {(this.state.shouldLimit && <button onClick={() => this.setState({ shouldLimit: false })}>Carregar Mais</button>)} */}
         </div>
