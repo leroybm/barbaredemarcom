@@ -19,7 +19,7 @@ noQueAcredito3: Para alcançar a minha proposta de trabalho e de vida, tenho aqu
   É um espaço de colaboração, pois junta todos os meus movimentos construídos
   diariamente nas trocas que participo, e busca trazer pra você um lugar para
   possíveis mergulhos e trocas comigo, com o outro ou com si mesmo.
-noQueAcreditoImg: https://barbarademarco.netlify.app/static/0ab001c8ba2b8c4d7dc03a68c36b48a4/a8669/c-internal-about-page.jpg
+noQueAcreditoImg: ../img/c-internal-about-page.jpg
 experiencia: >-
   Bárbara Demarco, é terapeuta, palestrante, consultora e analista, aventureira
   no mundo da escrita, onde expressa o seu sentir e criatividade. Através de seu
