@@ -12,7 +12,7 @@ export const AboutPageTemplate = () => {
         <div className="c-container container">
           <h1>No que acredito</h1>
 
-          <div class="c-mobile-only">
+          <div className="c-mobile-only">
             <span>Ao longo da minha experiência e da minha jornada trabalhando através da complexidade humana, tenho tido um interesse constante nas trocas relacionais e nos diálogos que se constroem a partir da interação e entrega no espaço da terapia. O que eu aprendi e aprendo em cada uma destas conversas, norteia  meu “jeito ser” enquanto terapeuta e influencia a “alma“ da minha prática.</span>
 
             <img src={cInternalAboutPage} alt={`Barbara Demarco`}/>
@@ -24,7 +24,7 @@ export const AboutPageTemplate = () => {
             <span>Para alcançar a minha proposta de trabalho e de vida, tenho aqui neste espaço, neste site, um lugar de aproximação das minhas maneiras, práticas e valores, com quem me lê, vê ou ouve. Ele une meus interesses, reflexões e apresenta um pouco de mim, oferecendo espaço para troca com vocês. É um espaço de colaboração, pois junta todos os meus movimentos construídos diariamente nas trocas que participo, e busca trazer pra você um lugar para possíveis mergulhos e trocas comigo, com o outro ou com si mesmo. </span>
           </div>
 
-          <div class="c-desktop-only">
+          <div className="c-desktop-only">
             <p>
               <span>Ao longo da minha experiência e da minha jornada trabalhando através da complexidade humana, tenho tido um interesse constante nas trocas relacionais e nos diálogos que se constroem a partir da interação e entrega no espaço da terapia. O que eu aprendi e aprendo em cada uma destas conversas, norteia  meu “jeito ser” enquanto terapeuta e influencia a “alma“ da minha prática.</span>
 
