@@ -257,7 +257,7 @@ collections:
             name: whatsappNumber
             type: string
 
-      - file: src/pages/sobre/index.md
+      - file: src/pages/sobre.md
         label: Sobre
         name: sobre
         fields:
