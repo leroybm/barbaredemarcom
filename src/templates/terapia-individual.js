@@ -19,9 +19,9 @@ export const TerapiaIndividualTemplate = ({ data }) => {
           <span dangerouslySetInnerHTML={{ __html: firstText }} />
 
           <div>
-            <img src={get(image, 'childImageSharp.fluid.src', '')} alt={`Imagem para página ${title}`}/>
+            <img src={get(image, 'childImageSharp.fluid.src', '')} alt={`Imagem para página ${title}`} />
 
-            <i dangerouslySetInnerHTML={{ __html: italicText }} /> 
+            <i dangerouslySetInnerHTML={{ __html: italicText }} />
           </div>
         </p>
 

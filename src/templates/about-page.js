@@ -18,11 +18,11 @@ export const AboutPageTemplate = ({ noQueAcredito1, noQueAcredito2, noQueAcredit
           <div className="c-mobile-only">
             <span>{noQueAcredito1}</span>
 
-            <img src={cInternalAboutPage} alt={`Barbara Demarco`}/>
+            <img src={cInternalAboutPage} alt={`Barbara Demarco`} />
 
-            <i>{noQueAcredito2}</i> 
+            <i>{noQueAcredito2}</i>
 
-            <br/><br/>
+            <br /><br />
 
             <span>{noQueAcredito3}</span>
           </div>
@@ -31,14 +31,14 @@ export const AboutPageTemplate = ({ noQueAcredito1, noQueAcredito2, noQueAcredit
             <p>
               <span>{noQueAcredito1}</span>
 
-              <i>{noQueAcredito2}</i> 
+              <i>{noQueAcredito2}</i>
 
               <span>{noQueAcredito3}</span>
 
               <strong>Seja bem vindo!</strong>
             </p>
 
-            <img src={imgSrc} alt={`Barbara Demarco`}/>
+            <img src={imgSrc} alt={`Barbara Demarco`} />
           </div>
 
           <div className="c-mobile-only">

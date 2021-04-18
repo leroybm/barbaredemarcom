@@ -14,7 +14,7 @@ class BlogRoll extends React.Component {
       <section className={`c-blog ${internal ? 'is-internal' : ''}`} id="blog">
         <div className="c-container">
           <h2>Blog</h2>
-  
+
           <div className="c-post-list">
             {posts &&
               posts.map(({ node: post }) => (
@@ -23,8 +23,8 @@ class BlogRoll extends React.Component {
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
-                        alt: `Imagem do post ${post.frontmatter.title}`, 
-                      }} 
+                        alt: `Imagem do post ${post.frontmatter.title}`,
+                      }}
                     />{/* TODO: Proper alt */}
                     <strong>{getTitle(post.frontmatter.title)}</strong>
                   </header>
@@ -34,7 +34,7 @@ class BlogRoll extends React.Component {
               ))
             }
           </div>
-  
+
           <Link to="/blog">Mais publicações</Link>
         </div>
       </section>

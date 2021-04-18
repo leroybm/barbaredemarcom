@@ -52,10 +52,10 @@ class AboutRoll extends React.Component {
         <div className="c-container">
           <h2>Minha História</h2>
 
-          {postGroup && postGroup.map((posts, i) => 
+          {postGroup && postGroup.map((posts, i) =>
             <div key={i} className={`c-about-roll__list ${i % 2 ? 'mirror' : ''} ${this.state.shouldLimit ? 'c-should-limit' : ''}`}>
               {posts && posts.map(({ node: post }, j) => (
-                <div className="c-about-roll__photo" key={post.id} id={`grid${((j)%5)+1}`}>
+                <div className="c-about-roll__photo" key={post.id} id={`grid${((j) % 5) + 1}`}>
                   <PreviewCompatibleImage
                     imageInfo={{
                       image: post.frontmatter.featuredimage,

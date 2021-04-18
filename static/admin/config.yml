@@ -62,6 +62,9 @@ collections:
               - label: Corpo
                 name: body
                 widget: text
+              - label: Corpo italico
+                name: body2
+                widget: text
 
           - label: Tipos de terapia
             name: typesOfTherapy

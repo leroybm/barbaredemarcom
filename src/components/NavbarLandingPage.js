@@ -39,16 +39,16 @@ const Navbar = class extends React.Component {
 
   toggleHamburger = () => {
     this.setState({
-        active: !this.state.active,
-      }, () => {
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
+      active: !this.state.active,
+    }, () => {
+      this.state.active
+        ? this.setState({
+          navBarActiveClass: 'is-active',
+        })
+        : this.setState({
+          navBarActiveClass: '',
+        })
+    }
     )
   }
 
@@ -76,7 +76,7 @@ const Navbar = class extends React.Component {
       .filter(phrase => phrase.id === this.state.activePhrase)
       .map(phrase =>
         <p key={phrase.id}>
-          {phrase.text}<br/>
+          {phrase.text}<br />
           <small>{phrase.author}</small>
         </p>
       );
@@ -146,7 +146,7 @@ const Navbar = class extends React.Component {
             </div>
           </div>
           <div className="c-bg-banner">
-              <img src={banner} alt="Banner" />
+            <img src={banner} alt="Banner" />
           </div>
         </div>
       </div>

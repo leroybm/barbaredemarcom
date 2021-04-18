@@ -10,6 +10,10 @@ whatIsTherapy:
     mesmos, por nós mesmos, gerando conexões com as nossas histórias de vida,  
     compreendendo melhor nossas versões, quem nos tornamos no passado, como vivemos 
     o presente e buscando ampliar nossa visão de nós mesmos no futuro.
+  body2: >
+    Percebo o processo terapêutico como um processo de co-autoria, onde nesta via de mão dupla o terapeuta e cliente caminham lado a lado, ele acontece através da conexão e abertura para o desconhecido e o já conhecido, para mim estar em terapia é fazer parte de um relacionamento: honesto, humilde e mutuamente transformador.
+    <br /><br />
+    A terapia é uma experiência existencial do autoentendimento.
 typesOfTherapy:
   title1: Pra encontrar a si mesmo
   body1: >
