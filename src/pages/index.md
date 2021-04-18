@@ -65,8 +65,8 @@ typesOfTherapy:
   image1alt: Mulher segurando chave, olhando para sua sombra, que possui uma
     fechadura no peito.
   image1: /img/chave.jpg
-  image2: ../img/caminho.jpg
-  image3: ../img/espelho.jpg
+  image2: /img/caminho.jpg
+  image3: /img/espelho.jpg
   title1: Pra encontrar a si mesmo
   title2: Pra encontrar o seu caminho
   title3: Pra abandonar o que paralisa
@@ -83,7 +83,7 @@ forWho:
         essencial: Olhar para nós mesmos!
       url: /terapia-individual
       imgAlt: Terapia Individual
-      image: ../img/c-internal-individual-therapy.jpg
+      image: /img/c-internal-individual-therapy.jpg
     couple:
       title: Terapia de Casal
       body: >
@@ -94,7 +94,7 @@ forWho:
         casal.
       url: /terapia-de-casal
       imgAlt: Terapia de Casal
-      image: ../img/c-internal-couple-therapy.jpg
+      image: /img/c-internal-couple-therapy.jpg
 aboutBarbara:
   title: Quem faz
   body: >
@@ -109,7 +109,7 @@ aboutBarbara:
   url: /sobre
   buttonLabel: Mais sobre mim
   imgAlt: None
-  image: ../img/about-home.jpg
+  image: /img/about-home.jpg
 contact:
   title: Contato
   body: Marque agora a sua conversa inicial sem compromisso, e aí a terapia começa.
