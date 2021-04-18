@@ -20,22 +20,22 @@ collections:
         name: templateKey
         widget: hidden
         default: blog-post
-      - label: Title
+      - label: Titulo
         name: title
         widget: string
-      - label: Publish Date
+      - label: Data de publicação
         name: date
         widget: datetime
-      - label: Description
+      - label: Descrição
         name: description
         widget: text
       - label: Featured Post
         name: featuredpost
-        widget: boolean
-      - label: Featured Image
+        widget: hidden
+      - label: Imagem principal
         name: featuredimage
         widget: image
-      - label: Body
+      - label: Texto
         name: body
         widget: markdown
       - label: Tags
@@ -268,22 +268,22 @@ collections:
             name: templateKey
             widget: hidden
             default: about-page
-          - label: Title
+          - label: Titulo
             name: title
             widget: hidden
-          - label: noQueAcredito1
+          - label: Texto parte 1
             name: noQueAcredito1
             widget: text
-          - label: noQueAcredito2
+          - label: Texto parte 2
             name: noQueAcredito2
             widget: text
-          - label: noQueAcredito3
+          - label: Texto parte 3
             name: noQueAcredito3
             widget: text
-          - label: noQueAcreditoImg
+          - label: Imagem
             name: noQueAcreditoImg
             widget: image
-          - label: experiencia
+          - label: Experiencia
             name: experiencia
             widget: text
             
@@ -309,7 +309,7 @@ collections:
       - label: Texto
         name: description
         widget: text
-      - label: Featured Image
+      - label: Imagem
         name: featuredimage
         widget: image
 
