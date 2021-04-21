@@ -1,6 +1,6 @@
 .c-social-networks
   position: fixed
-  left: $body-padding
+  left: 62px
   bottom: $body-padding
   transition: ease-in-out opacity 100ms
   display: grid
@@ -14,12 +14,12 @@
 
   @include mobile
     display: flex
-    gap: 16px
-    position: absolute
+    gap: 8px
     left: auto
     bottom: auto
-    top: $body-padding-mobile
+    top: 16px
     right: $body-padding-mobile
+    z-index: 99
 
   a
     color: rgba(0, 0, 0, 0.6)
@@ -30,8 +30,8 @@
 
     @include mobile
       font-size: 24px
-      width: 32px
-      height: 32px
+      width: 40px
+      height: 40px
       color: rgba(0, 0, 0, 0.6)
 
   svg
