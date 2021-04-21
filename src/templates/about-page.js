@@ -41,14 +41,14 @@ export const AboutPageTemplate = ({ noQueAcredito1, noQueAcredito2, noQueAcredit
             <img src={imgSrc} alt={`Barbara Demarco`} />
           </div>
 
-          <div className="c-mobile-only">
+          {/* <div className="c-mobile-only">
             <h3>
               Experiencia
             </h3>
 
             <p dangerouslySetInnerHTML={{ __html: experiencia }}>
             </p>
-          </div>
+          </div> */}
         </div>
         <span className="c-internal-about__background-shadow"></span>
       </section>

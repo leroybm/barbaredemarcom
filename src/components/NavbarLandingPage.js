@@ -5,7 +5,7 @@ import banner from '../img/mulher-nebulosa.png';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { windowScrollTo } from 'seamless-scroll-polyfill'
 
-const PHRASE_INTERVAL = 10000;
+// const PHRASE_INTERVAL = 10000;
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: '',
-      activePhrase: 0
+      activePhrase: Math.floor(Math.random() * 3)
     }
   }
 
@@ -23,19 +23,19 @@ const Navbar = class extends React.Component {
     { id: 2, text: `“O realmente difícil e realmente admirável abrir mão de ser perfeito e iniciar o trabalho de se tornar você mesmo”`, author: `Anna Quindlen` }
   ]
 
-  getNextPhrase = () => {
-    this.setState({
-      activePhrase: this.state.activePhrase === this.phrases.length - 1 ? 0 : this.state.activePhrase + 1
-    });
-  }
+  // getNextPhrase = () => {
+  //   this.setState({
+  //     activePhrase: this.state.activePhrase === this.phrases.length - 1 ? 0 : this.state.activePhrase + 1
+  //   });
+  // }
 
-  componentDidMount() {
-    this.timerId = setInterval(() => this.getNextPhrase(), PHRASE_INTERVAL);
-  }
+  // componentDidMount() {
+  //   this.timerId = setInterval(() => this.getNextPhrase(), PHRASE_INTERVAL);
+  // }
 
-  componentWillUnmount() {
-    clearInterval(this.timerId);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.timerId);
+  // }
 
   toggleHamburger = () => {
     this.setState({

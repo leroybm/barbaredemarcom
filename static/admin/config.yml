@@ -79,7 +79,7 @@ collections:
               - label: Imagem 1
                 name: image1
                 widget: image
-              - label: Descrição da Imagem 1
+              - label: Descrição da Imagem 1 (Para acessibilidade)
                 name: image1alt
                 type: string
               - label: Titulo 2
@@ -91,7 +91,7 @@ collections:
               - label: Imagem 2
                 name: image2
                 widget: image
-              - label: Descrição da Imagem 2
+              - label: Descrição da Imagem 2 (Para acessibilidade)
                 name: image2alt
                 type: string
               - label: Titulo 3
@@ -103,7 +103,7 @@ collections:
               - label: Imagem 3
                 name: image3
                 widget: image
-              - label: Descrição da Imagem 3
+              - label: Descrição da Imagem 3 (Para acessibilidade)
                 name: image3alt
                 type: string
 
@@ -134,7 +134,7 @@ collections:
                       - label: URL
                         name: url
                         widget: string
-                      - label: Descrição da imagem
+                      - label: Descrição da imagem (Para acessibilidade)
                         name: imgAlt
                         widget: string
                       - label: Imagem
@@ -153,7 +153,7 @@ collections:
                       - label: URL
                         name: url
                         widget: string
-                      - label: Descrição da imagem
+                      - label: Descrição da imagem (Para acessibilidade)
                         name: imgAlt
                         widget: string
                       - label: Imagem
@@ -176,7 +176,7 @@ collections:
               - label: Texto do botão
                 name: buttonLabel
                 type: string
-              - label: Descrição da imagem
+              - label: Descrição da imagem (Para acessibilidade)
                 name: imgAlt
                 type: string
               - label: Imagem
@@ -285,7 +285,7 @@ collections:
             widget: image
           - label: Experiencia
             name: experiencia
-            widget: text
+            widget: hidden
             
   - name: about-roll
     label: Fotos sobre
